@@ -1,1 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap");
+
 /* You can add global styles to this file, and also import other style files */
+/* || RESET */
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* || VARIABLES */
+:root {
+  /* Fonts */
+  --FF: "Montserrat", sans-serif;
+  --FS-HERO: 4rem;
+  --FS-HEADING-MAIN: 2rem;
+  --FS-HEADING-MAIN-L: 3rem;
+
+  /* Colors */
+  --DARK: #000;
+  --GREY: #f0eeed;
+
+  /* Border */
+  --BORDER-RADIUS: 20px;
+
+  /* Padding */
+  --PADDING-INLINE: 20px;
+  --PADDING-INLINE: 100px;
+}
+
+/* || UTILITY CLASS */
+.offscreen {
+  position: absolute;
+  left: 10000px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* || GENERAL */
+
+html {
+  font-family: var(--FF);
+}
+
+body {
+  min-height: 100vh;
+  color: var(--DARK);
+}
