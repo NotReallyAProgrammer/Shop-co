@@ -1,0 +1,19 @@
+.banner {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: var(--DARK);
+  min-height: 40px;
+  color: var(--WHITE);
+}
+
+.banner a {
+  color: var(--WHITE);
+}
+
+.banner a:hover,
+.banner a:focus {
+  color: var(--GREY);
+}
