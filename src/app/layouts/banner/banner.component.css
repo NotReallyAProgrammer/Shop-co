@@ -1,5 +1,5 @@
 .banner {
-  font-size: 12px;
+  font-size: var(--FS-BANNER);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,4 +16,10 @@
 .banner a:hover,
 .banner a:focus {
   color: var(--GREY);
+}
+
+@media screen and (min-width: 760px) {
+  .banner {
+    padding-block: 16px;
+  }
 }

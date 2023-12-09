@@ -29,18 +29,26 @@ button {
   --FS-HERO: 4rem;
   --FS-HEADING-MAIN: 2rem;
   --FS-HEADING-MAIN-L: 3rem;
+  --FS-BANNER: clamp(0.75rem, 0.725rem + 0.125vw, 0.875rem);
 
   /* Colors */
   --DARK: #000;
+  --DARK-GREY: #818181;
   --GREY: #f0eeed;
   --WHITE: #fff;
 
   /* Border */
   --BORDER-RADIUS: 20px;
+  --BORDER-ROUND: 100px;
 
   /* Padding */
-  --PADDING-INLINE: 20px;
-  --PADDING-INLINE: 100px;
+  --PADDING-INLINE: 5%;
+  --PADDING-INLINE-L: 100px;
+
+  /* GAP */
+  --GAP-S: 10px;
+  --GAP-M: 20px;
+  --GAP-L: 60px;
 }
 
 /* || UTILITY CLASS */
