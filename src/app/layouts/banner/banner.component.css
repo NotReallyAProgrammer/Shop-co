@@ -7,6 +7,8 @@
   background-color: var(--DARK);
   min-height: 40px;
   color: var(--WHITE);
+  padding-inline: var(--PADDING-INLINE);
+  padding-block: 10px;
 }
 
 .banner a {
