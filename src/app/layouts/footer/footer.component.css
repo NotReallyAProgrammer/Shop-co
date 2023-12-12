@@ -2,6 +2,7 @@
   padding-bottom: 70px;
   padding-inline: var(--PADDING-INLINE);
   background-color: var(--GREY);
+  margin-top: 150px;
 }
 
 .footer__banner {

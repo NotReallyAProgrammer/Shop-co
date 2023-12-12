@@ -44,8 +44,7 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', ['$event']) getScrollHeight(event: any) {
     if (window.scrollY > 0) {
-      this.isNavOpen = !this.isNavOpen;
-      this.isSearchOpen = !this.isSearchOpen;
+      if (this.isNavOpen == true) this.isNavOpen = false;
     }
   }
 }

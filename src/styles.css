@@ -30,10 +30,13 @@ button {
   --FS-HEADING-MAIN: 2rem;
   --FS-HEADING-MAIN-L: 3rem;
   --FS-BANNER: clamp(0.75rem, 0.725rem + 0.125vw, 0.875rem);
+  --FS-HERO: clamp(2.25rem, 1.9rem + 1.7500000000000002vw, 4rem);
+  --FS-HERO-P: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
 
   /* Colors */
   --DARK: hsl(0, 0%, 0%);
   --DARK-GREY: hsl(0, 0%, 51%);
+  --LIGHT-GREY: hsl(330, 7%, 95%);
   --GREY: hsl(20, 9%, 94%);
   --WHITE: hsl(0, 0%, 100%);
 
@@ -44,6 +47,7 @@ button {
   /* Padding */
   --PADDING-INLINE: 5%;
   --PADDING-INLINE-L: 100px;
+  --PADDING-BLOCK: 40px;
 
   /* GAP */
   --GAP-S: 10px;
@@ -54,7 +58,7 @@ button {
 /* || UTILITY CLASS */
 .offscreen {
   position: absolute;
-  left: 10000px;
+  left: -10000px;
 }
 
 .center {
