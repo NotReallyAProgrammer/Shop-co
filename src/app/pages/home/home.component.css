@@ -81,12 +81,119 @@
   padding: 45px;
   background-color: var(--DARK);
 }
+/* END OF .hero */
+.store {
+  padding-inline: var(--PADDING-INLINE);
+  padding-block: var(--PADDING-BLOCK);
+}
+
+.store__carousell {
+  display: flex;
+  flex-direction: column;
+  gap: var(--GAP-L);
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.store-border {
+  margin-block: 50px;
+}
+
+.store-button {
+  border: 1px solid var(--DARK);
+}
+
+.store-button:hover {
+  background-color: var(--DARK);
+  color: var(--WHITE);
+}
+
+.store__categories {
+  padding-inline: var(--PADDING-INLINE);
+  padding-block: var(--PADDING-BLOCK);
+  border-radius: var(--BORDER-RADIUS);
+  background-color: var(--GREY);
+  margin-inline: auto;
+  margin-top: 150px;
+  background-image: url("../../../assets/background/categories-bg2.svg");
+}
+
+.store__categories h2 {
+  margin-bottom: 40px;
+}
+
+.categories-container {
+  display: grid;
+
+  gap: var(--GAP-S);
+  place-items: center;
+}
+
+.categories-img {
+  height: 190px;
+
+  background-color: var(--WHITE);
+  position: relative;
+  border-radius: var(--BORDER-RADIUS);
+  overflow: hidden;
+  border: none;
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.categories-img p {
+  position: absolute;
+  left: 30px;
+  top: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  z-index: 1;
+}
+
+.casual img,
+.formal img {
+  width: 100%;
+  height: auto;
+  margin-left: 50%;
+  transform: scale(1.5);
+}
+
+.party img {
+  transform: scale(1);
+  margin-left: 25%;
+  margin-top: -20%;
+}
+.gym img {
+  transform: scale(0.8);
+  margin-left: 25%;
+  margin-top: -50%;
+}
+
+.store__reviews {
+  margin-top: 100px;
+}
+
+.review-h2 {
+  text-align: start;
+}
 
 /*  */
 /* MEDIA QUERY */
 
 @media screen and (min-width: 760px) {
   .banner-img {
+    width: 100%;
+  }
+
+  .categories-container {
+    display: grid;
+
+    gap: var(--GAP-S);
+    row-gap: var(--GAP-M);
+    place-items: center;
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .formal {
     width: 100%;
   }
 }
@@ -117,5 +224,11 @@
 
   .hero__banner {
     place-items: end;
+  }
+
+  /*  */
+  .store-button {
+    align-self: center;
+    width: 30%;
   }
 }

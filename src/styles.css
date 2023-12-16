@@ -53,6 +53,9 @@ button {
   --GAP-S: 10px;
   --GAP-M: 20px;
   --GAP-L: 60px;
+
+  /* BOX SHADOW */
+  --BOX-SHADOW: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
 /* || UTILITY CLASS */
@@ -73,6 +76,14 @@ button {
   background-color: var(--DARK-GREY);
   width: 100%;
   height: 1px;
+}
+
+.banner-h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-size: clamp(2rem, 1.8rem + 1vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 /* logo */
@@ -159,6 +170,7 @@ input:focus {
 
 html {
   font-family: var(--FF);
+  background-color: var(--WHITE);
 }
 
 body {

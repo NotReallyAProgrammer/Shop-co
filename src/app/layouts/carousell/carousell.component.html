@@ -1,0 +1,36 @@
+<div class="carousell">
+  <swiper-container
+    slides-per-view="2"
+    space-between="20"
+    [breakpoints]="{
+      '760': {
+        slidesPerView: 3,
+
+      },
+      '1024': {
+        slidesPerView: 4,
+
+      }
+    }"
+  >
+    <swiper-slide
+      id="swiper"
+      class="card-container swiper"
+      *ngFor="let carousell of carousellInfo; let i = index"
+    >
+      <figure class="img-container">
+        <img [src]="carousell.apparelImgUrl" alt="" />
+      </figure>
+      <p class="card-name">{{ carousell.apparelName }}</p>
+      <i class="card-rating">
+        <img
+          *ngFor="let icon of maxRatingarr"
+          src="../../../assets/Icons/Star 1.svg"
+          alt=""
+        />
+        <span>{{ carousell.apparelRatings }} / 5</span>
+      </i>
+      <p class="card-price">{{ carousell.apparelPrice | currency : "USD" }}</p>
+    </swiper-slide>
+  </swiper-container>
+</div>
