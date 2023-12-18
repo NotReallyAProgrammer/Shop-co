@@ -35,9 +35,9 @@ button {
 
   /* Colors */
   --DARK: hsl(0, 0%, 0%);
-  --DARK-GREY: hsl(0, 0%, 51%);
-  --LIGHT-GREY: hsl(330, 7%, 95%);
-  --GREY: hsl(20, 9%, 94%);
+  --DARK-GREY: rgb(130, 130, 130);
+  --LIGHT-GREY: rgb(242, 242, 242);
+  --GREY: rgb(241, 239, 238);
   --WHITE: hsl(0, 0%, 100%);
 
   /* Border */
@@ -103,8 +103,7 @@ button {
   cursor: pointer;
 }
 
-.social-logo:hover,
-.social-logo i:hover {
+.social-logo:hover {
   background-color: var(--DARK);
   fill: white;
 }

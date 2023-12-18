@@ -170,12 +170,53 @@
 
 .store__reviews {
   margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.reviews-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--GAP-M);
+  padding-inline: var(--PADDING-INLINE);
+  overflow: hidden;
+  flex-wrap: wrap;
 }
 
 .review-h2 {
   text-align: start;
 }
 
+.arrow-container {
+  display: flex;
+  gap: var(--GAP-S);
+}
+
+.arrow {
+  border: 1px solid var(--DARK);
+  display: grid;
+  place-items: center;
+  border-radius: var(--BORDER-ROUND);
+  padding: 5px;
+  cursor: pointer;
+  background: none;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.comment-container {
+  padding: 5px;
+  margin-top: 30px;
+
+  margin-inline: auto;
+}
+
+/* swiper comment */
+.swiper-slide,
+.swiper-slide-active {
+  display: grid;
+  place-items: center;
+}
 /*  */
 /* MEDIA QUERY */
 
@@ -196,6 +237,20 @@
   .formal {
     width: 100%;
   }
+
+  swiper-slide {
+    display: block;
+  }
+
+  .swiper-slide,
+  .swiper-slide-next,
+  .swiper-slide-pre {
+    filter: blur(4px);
+  }
+
+  .swiper-slide-active {
+    filter: none;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -215,6 +270,12 @@
 
   .info-container {
     align-self: self-start;
+    justify-content: start;
+  }
+
+  .info-container div {
+    align-items: flex-start;
+    margin-bottom: 30px;
   }
 
   .hero-button {
@@ -230,5 +291,17 @@
   .store-button {
     align-self: center;
     width: 30%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .swiper-slide {
+    filter: blur(4px);
+  }
+
+  .swiper-slide-active,
+  .swiper-slide-next,
+  .swiper-slide-prev {
+    filter: none;
   }
 }

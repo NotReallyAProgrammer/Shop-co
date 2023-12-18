@@ -10,6 +10,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { CarousellComponent } from './layouts/carousell/carousell.component';
 
 import { register } from 'swiper/element/bundle';
+import { CommentsCardComponent } from './layouts/comments-card/comments-card.component';
+import { SummaryPipe } from './pipe/summary.pipe';
+
 // register Swiper custom elements
 register();
 
@@ -21,6 +24,8 @@ register();
     BannerComponent,
     HomeComponent,
     CarousellComponent,
+    CommentsCardComponent,
+    SummaryPipe,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

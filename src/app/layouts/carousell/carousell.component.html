@@ -22,14 +22,19 @@
         <img [src]="carousell.apparelImgUrl" alt="" />
       </figure>
       <p class="card-name">{{ carousell.apparelName }}</p>
-      <i class="card-rating">
-        <img
-          *ngFor="let icon of maxRatingarr"
-          src="../../../assets/Icons/Star 1.svg"
-          alt=""
-        />
-        <span>{{ carousell.apparelRatings }} / 5</span>
-      </i>
+
+      <div class="crop" [style.width.px]="carousell.apparelRatings">
+        <i class="card-rating" style="width: 75px">
+          <img src="../../../assets/Icons/Star 1.svg" alt="" />
+          <img src="../../../assets/Icons/Star 1.svg" alt="" />
+          <img src="../../../assets/Icons/Star 1.svg" alt="" />
+          <img src="../../../assets/Icons/Star 1.svg" alt="" />
+          <img src="../../../assets/Icons/Star 1.svg" alt="" />
+
+          <span>{{ carousell.apparelRatings }} / 5</span>
+        </i>
+      </div>
+
       <p class="card-price">{{ carousell.apparelPrice | currency : "USD" }}</p>
     </swiper-slide>
   </swiper-container>

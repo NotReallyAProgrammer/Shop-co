@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { carousellData } from './carousell-data';
-import Swiper from 'swiper';
 
 @Component({
   selector: 'app-carousell',

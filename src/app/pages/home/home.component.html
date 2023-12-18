@@ -8,7 +8,7 @@
     <button type="submit" class="button hero-button">Shop Now</button>
 
     <div class="info-container">
-      <div>
+      <div class="info-wrapper">
         <h2>200+</h2>
         <p>International Brands</p>
       </div>
@@ -197,8 +197,78 @@
       </button>
     </div>
   </section>
+</section>
 
-  <section class="store__reviews">
+<section class="store__reviews">
+  <div class="reviews-header">
     <h2 class="banner-h2 review-h2">Our Happy Customers</h2>
+
+    <div class="arrow-container">
+      <i class="button-prev arrow">
+        <svg
+          class="feather feather-arrow-left"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line x1="19" x2="5" y1="12" y2="12" />
+          <polyline points="12 19 5 12 12 5" />
+        </svg>
+      </i>
+      <i class="button-next arrow">
+        <svg
+          class="feather feather-arrow-right"
+          fill="none"
+          height="24"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <line x1="5" x2="19" y1="12" y2="12" />
+          <polyline points="12 5 19 12 12 19" />
+        </svg>
+      </i>
+    </div>
+  </div>
+
+  <section class="comment-container">
+    <swiper-container
+      slides-per-view="1"
+      space-between="20"
+      centered-slides="true"
+      initial-slide="3"
+      navigation-next-el=".button-next"
+      navigation-prev-el=".button-prev"
+      [breakpoints]="{
+      '760': {
+        slidesPerView: 2,
+
+      },
+      '1024': {
+        slidesPerView: 4,
+        spaceBetween:20
+
+      },'1500': {
+        slidesPerView: 5,
+        spaceBetween:20
+      }
+
+    }"
+      class="swiper-container"
+    >
+      <swiper-slide class="swiper-slide" *ngFor="let comment of commentData">
+        <app-comments-card [customersComment]="comment"></app-comments-card>
+      </swiper-slide>
+    </swiper-container>
   </section>
 </section>

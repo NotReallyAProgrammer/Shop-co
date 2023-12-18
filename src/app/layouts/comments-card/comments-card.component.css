@@ -1,0 +1,48 @@
+.card-container {
+  max-width: 400px;
+  max-height: 210px;
+  padding: 25px 32px;
+  border: 1px solid var(--DARK-GREY);
+  border-radius: var(--BORDER-RADIUS);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: hidden;
+  /* box-shadow: var(--BOX-SHADOW); */
+}
+
+.name-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.name-container i {
+  display: grid;
+  place-items: center;
+}
+
+.name-container svg {
+  fill: #01ab31;
+}
+
+.card-name {
+  font-weight: 700;
+}
+
+.card-comment {
+  font-size: 14px;
+  color: var(--DARK-GREY);
+  text-overflow: clip;
+}
+
+.star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.star img {
+  width: 20px;
+  height: 20px;
+}
