@@ -35,14 +35,3 @@
   color: var(--DARK-GREY);
   text-overflow: clip;
 }
-
-.star {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.star img {
-  width: 20px;
-  height: 20px;
-}

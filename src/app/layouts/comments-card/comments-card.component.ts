@@ -7,4 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class CommentsCardComponent {
   @Input() customersComment: any;
+  @Input() maxRating: Number = 5;
+  maxRatingarr: any = [];
+
+  ngOnInit() {
+    this.maxRatingarr = Array(this.maxRating).fill(0);
+  }
 }

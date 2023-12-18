@@ -165,6 +165,37 @@ input:focus {
   background-color: var(--WHITE);
 }
 
+/* star ratings */
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: var(--GAP-S);
+}
+
+.rating-container p span {
+  color: var(--DARK-GREY);
+}
+
+.crop {
+  overflow: hidden;
+}
+
+.star-container {
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+
+.star-container span {
+  display: grid;
+  place-items: center;
+}
+
+.star-container span svg {
+  fill: #ffc633;
+}
+
 /* || GENERAL */
 
 html {

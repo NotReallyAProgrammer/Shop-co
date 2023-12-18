@@ -3,7 +3,7 @@ export const carousellData = [
     apparelImgUrl:
       'https://s3-alpha-sig.figma.com/img/d40d/a9a3/a7234235e66d6695d9d7098fc3289872?Expires=1703462400&Signature=CTcXEPxuokv4hB2uegADji5g4gfKphUy7PCAod2TVgk~2adD7k1bZFlriEolcLKCsoP3dGR-0tZPEbOBP1RDqTZ1mAgfi0-zs4e4qGKQxRqifJcSN-tukyJ7uupy88dvJjF4pvtCeTPJ4ka2IpAOOOfuGu7LcOOKyxfiT23z9DyiAoHTtY6r6D4k1m0LkNMmfzpCyKM7B5ajP8b9xe2yJMztz54GtfoASqvyJx3JEupI5zJjcZxVdZOh0nPgskVp9RUoNvGijjUNTf8Z0f8bLGxnbigUuX0YLBQxzyf2EAUVJE8t-LOSMdXmsZ2GqrgYkVwFsYlS9dOBdzgP1YXk-A__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
     apparelName: 'T-Shirt with Tape Details',
-    apparelRatings: 4,
+    apparelRatings: 5,
     apparelPrice: 250,
   },
 

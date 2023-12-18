@@ -1,6 +1,6 @@
 export const commentsData = [
   {
-    commentRating: 5,
+    commentRating: 4.5,
     commentName: 'Sarah M.',
     commentVerified: true,
     comment:
@@ -8,7 +8,7 @@ export const commentsData = [
   },
 
   {
-    commentRating: 5,
+    commentRating: 4.5,
     commentName: 'Jane M.',
     commentVerified: false,
     comment:
@@ -24,7 +24,7 @@ export const commentsData = [
   },
 
   {
-    commentRating: 4,
+    commentRating: 3.5,
     commentName: ' Sarah L.',
     commentVerified: true,
     comment:
@@ -32,7 +32,7 @@ export const commentsData = [
   },
 
   {
-    commentRating: 4,
+    commentRating: 5,
     commentName: 'Alex W.',
     commentVerified: true,
     comment:
@@ -57,7 +57,7 @@ export const commentsData = [
   },
 
   {
-    commentRating: 3,
+    commentRating: 3.5,
     commentName: 'Jason R',
     commentVerified: true,
     comment:
