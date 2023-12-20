@@ -1,0 +1,271 @@
+<section class="categories">
+  <div class="border"></div>
+
+  <div class="categories__url">
+    <p>Home</p>
+
+    <i>
+      <svg
+        height="512px"
+        id="Layer_1"
+        style="enable-background: new 0 0 512 512"
+        version="1.1"
+        viewBox="0 0 512 512"
+        width="512px"
+        xml:space="preserve"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+      >
+        <polygon
+          points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "
+        />
+      </svg>
+    </i>
+
+    <p>Categories</p>
+  </div>
+
+  <section class="categories__main">
+    <div class="main-header">
+      <h2>Casual</h2>
+      <p>Showing 1-10 of 100 Products</p>
+
+      <i class="filter">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+              }
+            </style>
+          </defs>
+
+          <g data-name="Layer 2" id="Layer_2">
+            <path d="M28,9H11a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" />
+            <path d="M7,9H4A1,1,0,0,1,4,7H7A1,1,0,0,1,7,9Z" />
+            <path d="M21,17H4a1,1,0,0,1,0-2H21a1,1,0,0,1,0,2Z" />
+            <path d="M11,25H4a1,1,0,0,1,0-2h7a1,1,0,0,1,0,2Z" />
+            <path
+              d="M9,11a3,3,0,1,1,3-3A3,3,0,0,1,9,11ZM9,7a1,1,0,1,0,1,1A1,1,0,0,0,9,7Z"
+            />
+            <path
+              d="M23,19a3,3,0,1,1,3-3A3,3,0,0,1,23,19Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,23,15Z"
+            />
+            <path
+              d="M13,27a3,3,0,1,1,3-3A3,3,0,0,1,13,27Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,13,23Z"
+            />
+            <path d="M28,17H25a1,1,0,0,1,0-2h3a1,1,0,0,1,0,2Z" />
+            <path d="M28,25H15a1,1,0,0,1,0-2H28a1,1,0,0,1,0,2Z" />
+          </g>
+          <g id="frame"><rect class="cls-1" height="32" width="32" /></g>
+        </svg>
+      </i>
+    </div>
+
+    <section class="main-product">
+      <app-product-card class="product-card"></app-product-card>
+    </section>
+    <div class="border product-border"></div>
+    <div class="main-controller">
+      <button type="button" title="prev" class="button-controller">
+        <i>
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <g data-name="Layer 2" id="Layer_2">
+              <path
+                d="M10.1,23a1,1,0,0,0,0-1.41L5.5,17H29.05a1,1,0,0,0,0-2H5.53l4.57-4.57A1,1,0,0,0,8.68,9L2.32,15.37a.9.9,0,0,0,0,1.27L8.68,23A1,1,0,0,0,10.1,23Z"
+              />
+            </g>
+          </svg>
+        </i>
+        Previous
+      </button>
+
+      <div class="controller-page">
+        <a class="active">1</a>
+
+        <a>2</a>
+
+        <p>...</p>
+
+        <a>5</a>
+
+        <a>6</a>
+      </div>
+
+      <button type="button" title="next" class="button-controller">
+        Next
+        <i>
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <g data-name="Layer 2" id="Layer_2">
+              <path
+                d="M22,9a1,1,0,0,0,0,1.42l4.6,4.6H3.06a1,1,0,1,0,0,2H26.58L22,21.59A1,1,0,0,0,22,23a1,1,0,0,0,1.41,0l6.36-6.36a.88.88,0,0,0,0-1.27L23.42,9A1,1,0,0,0,22,9Z"
+              />
+            </g>
+          </svg>
+        </i>
+      </button>
+    </div>
+  </section>
+
+  <aside class="categories__filter">
+    <div class="filter-top">
+      <h2 class="filter-h2">Filters</h2>
+      <i>
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+                stroke: #000;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 2px;
+              }
+            </style>
+          </defs>
+
+          <g id="cross">
+            <line class="cls-1" x1="7" x2="25" y1="7" y2="25" />
+            <line class="cls-1" x1="7" x2="25" y1="25" y2="7" />
+          </g>
+        </svg>
+      </i>
+    </div>
+
+    <div class="border"></div>
+    <section class="filter-clothe-type">
+      <ul *ngFor="let clothe of clotheTypes">
+        <li>
+          <a href="">{{ clothe.clotheType }}</a>
+          <i class="arrow-filter">
+            <svg
+              height="24px"
+              id="Layer_1"
+              style="enable-background: new 0 0 512 512"
+              version="1.1"
+              viewBox="0 0 512 512"
+              width="24px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <polygon
+                points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "
+              />
+            </svg>
+          </i>
+        </li>
+      </ul>
+    </section>
+    <div class="border"></div>
+    <section class="filter-price-slider">
+      <div class="filter-top filter-price-heading">
+        <h2 class="filter-h2">Filters</h2>
+        <i>
+          <svg
+            height="20px"
+            id="Layer_1"
+            style="enable-background: new 0 0 512 512"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="20px"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <path
+              d="M256,213.7L256,213.7L256,213.7l174.2,167.2c4.3,4.2,11.4,4.1,15.8-0.2l30.6-29.9c4.4-4.3,4.5-11.3,0.2-15.5L264.1,131.1  c-2.2-2.2-5.2-3.2-8.1-3c-3-0.1-5.9,0.9-8.1,3L35.2,335.3c-4.3,4.2-4.2,11.2,0.2,15.5L66,380.7c4.4,4.3,11.5,4.4,15.8,0.2L256,213.7  z"
+            />
+          </svg>
+        </i>
+      </div>
+
+      <div class="range-slider">
+        <span
+          class="slider-track"
+          [style.left.%]="
+            ((minVal - sliderMinval) / (sliderMaxVal - sliderMinval)) * 100
+          "
+          [style.right.%]="
+            100 -
+            ((maxVal - sliderMinval) / (sliderMaxVal - sliderMinval)) * 100
+          "
+        ></span>
+        <input
+          type="range"
+          name="min-val"
+          class="min-val"
+          [formControl]="minInputVal"
+          [min]="sliderMinval"
+          [max]="sliderMaxVal"
+          value="1000"
+          (input)="slideMin()"
+          title="price picker"
+        />
+
+        <input
+          type="range"
+          name="max-val"
+          class="max-val"
+          [formControl]="maxInputVal"
+          [min]="sliderMinval"
+          [max]="sliderMaxVal"
+          [value]="maxVal"
+          (input)="slideMax()"
+          title="price picker"
+        />
+
+        <div
+          class="tooltip min-tooltip"
+          [style.left.%]="
+            ((minVal - sliderMinval) / (sliderMaxVal - sliderMinval)) * 100
+          "
+          *ngIf="minVal"
+        >
+          $ {{ minVal }}
+        </div>
+        <div
+          class="tooltip max-tooltip"
+          [style.right.%]="
+            100 -
+            ((maxVal - sliderMinval) / (sliderMaxVal - sliderMinval)) * 100
+          "
+          *ngIf="maxVal"
+        >
+          $ {{ maxVal }}
+        </div>
+      </div>
+
+      <!-- for input range -->
+      <!-- <div class="input-box">
+        <div class="min-box">
+          <div class="input-wrap">
+            <span class="input-addon">$</span>
+            <input
+              type="text"
+              name="min_input"
+              [ngModel]="minVal"
+              [formControl]="inputMinVal"
+              class="input-field min-input"
+              title="min input"
+            />
+          </div>
+        </div>
+
+        <div class="max-box">
+          <div class="input-wrap">
+            <p class="input-addon">$</p>
+            <input
+              type="text"
+              name="max_input"
+              [ngModel]="maxVal"
+              [formControl]="inputMaxVal"
+              class="input-field max-input"
+              title="max input"
+            />
+          </div>
+        </div>
+      </div> -->
+    </section>
+  </aside>
+</section>
