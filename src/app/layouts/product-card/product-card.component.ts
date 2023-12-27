@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { carousellData } from '../carousell/carousell-data';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-product-card',
@@ -7,11 +6,12 @@ import { carousellData } from '../carousell/carousell-data';
   styleUrls: ['./product-card.component.css'],
 })
 export class ProductCardComponent {
-  @Input() carousellInfo = carousellData;
+  @Input() storeInventory!: any;
   @Input() maxRating: Number = 5;
+  @Input() currentPage!: any;
   maxRatingarr: any = [];
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.maxRatingarr = Array(this.maxRating).fill(0);
   }
 }

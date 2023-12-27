@@ -35,7 +35,7 @@ button {
 
   /* Colors */
   --DARK: hsl(0, 0%, 0%);
-  --DARK-GREY: rgb(130, 130, 130);
+  --DARK-GREY: #828282;
   --LIGHT-GREY: rgb(242, 242, 242);
   --GREY: rgb(241, 239, 238);
   --WHITE: hsl(0, 0%, 100%);
@@ -163,6 +163,7 @@ input:focus {
   border-radius: var(--BORDER-ROUND);
   border: none;
   background-color: var(--WHITE);
+  cursor: pointer;
 }
 
 /* star ratings */

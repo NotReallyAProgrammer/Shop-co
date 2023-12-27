@@ -1,14 +1,18 @@
 <div
   class="card-container"
-  *ngFor="let carousell of carousellInfo; let i = index"
+  *ngFor="
+    let product of storeInventory
+      | paginate : { itemsPerPage: 9, currentPage: currentPage };
+    let i = index
+  "
 >
   <figure class="img-container">
-    <img [src]="carousell.apparelImgUrl" alt="" />
+    <img [src]="product.clotheImgUrl" alt="" />
   </figure>
-  <p class="card-name">{{ carousell.apparelName | summary : 15 }}</p>
+  <p class="card-name">{{ product.clotheName }}</p>
 
   <div class="rating-container">
-    <div class="crop" [style.width.px]="(carousell.apparelRatings * 120) / 5">
+    <div class="crop" [style.width.px]="(product.clotheRating * 120) / 5">
       <div class="star-container">
         <span *ngFor="let star of maxRatingarr">
           <svg
@@ -34,9 +38,25 @@
       </div>
     </div>
     <p>
-      <span>{{ carousell.apparelRatings }}</span> / 5
+      <span>{{ product.clotheRating }}</span> / 5
     </p>
   </div>
 
-  <p class="card-price">{{ carousell.apparelPrice | currency : "USD" }}</p>
+  <div class="price-container">
+    <p *ngIf="product.isDiscounted" class="card-price">
+      {{
+        ((product.clothesDiscount / 100) * product.clothePrice -
+          product.clothePrice) *
+          -1 | currency : "USD"
+      }}
+    </p>
+
+    <p [ngClass]="product.isDiscounted ? 'discounted' : 'card-price'">
+      {{ product.clothePrice | currency : "USD" }}
+    </p>
+
+    <p class="discount" *ngIf="product.isDiscounted">
+      {{ product.clothesDiscount }} %
+    </p>
+  </div>
 </div>

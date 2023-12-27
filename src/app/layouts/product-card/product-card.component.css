@@ -19,6 +19,13 @@
   object-fit: contain;
 }
 
+.card-name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 150px;
+}
+
 .card-name,
 .card-price {
   color: var(--DARK);
@@ -35,12 +42,51 @@
   font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
 }
 
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.discount {
+  font-size: 10px;
+  color: #f33;
+  background-color: rgba(255, 165, 165, 0.438);
+  padding: 6px 14px;
+  width: max-content;
+  border-radius: var(--BORDER-ROUND);
+}
+
+.discounted {
+  color: var(--DARK-GREY);
+  font-size: 20px;
+
+  font-weight: 700;
+
+  text-decoration-line: line-through;
+}
+
 .rating-container {
 }
 
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 900px) {
   .img-container {
-    height: 300px;
-    width: 300px;
+    height: 260px;
+    width: 200px;
+  }
+
+  .card-name {
+    width: 180px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .img-container {
+    height: 280px;
+    width: 280px;
+  }
+
+  .card-name {
+    width: 100%;
   }
 }

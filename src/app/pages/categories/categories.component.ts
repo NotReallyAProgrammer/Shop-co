@@ -1,6 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { clotheType } from './filter-data';
-import { FormControl } from '@angular/forms';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { clothesInventory } from 'src/app/dummy-data/clothes-data';
 
 @Component({
   selector: 'app-categories',
@@ -8,52 +7,47 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./categories.component.css'],
 })
 export class CategoriesComponent {
-  clotheTypes = clotheType;
+  filterOpen: boolean = true;
 
-  priceForDisplay: number = 0.0;
+  mainProduct = clothesInventory;
+  total: number = this.mainProduct.length;
 
-  minInputVal = new FormControl();
-  maxInputVal = new FormControl();
-  inputMinVal = new FormControl();
-  inputMaxVal = new FormControl();
+  //Pagination
+  @Input() currentPage: number = 1;
 
-  minGap: number = 0;
-  @Input() minVal: number = 1000;
-  @Input() maxVal: number = 10000;
+  @Input() limit: number = 9;
+  // @Output() changePage = new EventEmitter<number>();
+  pages: number[] = [];
 
-  sliderMaxVal: number = 20000;
-  sliderMinval: number = 0;
-
-  constructor() {
-    this.minInputVal.valueChanges.subscribe((values) => {
-      this.minVal = values;
-    });
-
-    this.inputMinVal.valueChanges.subscribe((values) => {
-      this.minVal = values;
-    });
-
-    this.maxInputVal.valueChanges.subscribe((values) => {
-      this.maxVal = values;
-    });
-
-    this.inputMaxVal.valueChanges.subscribe((values) => {
-      this.maxVal = values;
-    });
+  ngOnInit() {
+    const pagesCount = Math.ceil(this.total / this.limit);
+    this.pages = this.range(1, pagesCount);
   }
 
-  slideMin() {
-    let gap = this.maxVal - this.minVal;
-
-    if (gap <= this.minGap) {
-      this.minVal = this.maxVal - this.minGap;
+  isFilterClose(status: any): void {
+    this.filterOpen = status;
+  }
+  isFilterOpen() {
+    if (this.filterOpen === false) {
+      this.filterOpen = true;
+    } else {
+      this.filterOpen = false;
     }
   }
-  slideMax() {
-    let gap = this.maxVal - this.minVal;
 
-    if (gap <= this.minGap) {
-      this.maxVal = this.maxVal + this.minGap;
-    }
+  changePage(page: any): void {
+    this.currentPage = page;
+  }
+
+  prevPage(): void {
+    this.currentPage = this.currentPage - 1;
+  }
+
+  nextPage(): void {
+    this.currentPage = this.currentPage + 1;
+  }
+
+  range(start: number, end: number): number[] {
+    return [...Array(end).keys()].map((el) => el + start);
   }
 }

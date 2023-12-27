@@ -1,0 +1,315 @@
+<aside class="categories__filter" *ngIf="filterStatus">
+  <div class="filter-top">
+    <h2 class="filter-h2">Filters</h2>
+    <i class="close-filter" (click)="isFilterOpen()">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: none;
+              stroke: #000;
+              stroke-linecap: round;
+              stroke-linejoin: round;
+              stroke-width: 2px;
+            }
+          </style>
+        </defs>
+
+        <g id="cross">
+          <line class="cls-1" x1="7" x2="25" y1="7" y2="25" />
+          <line class="cls-1" x1="7" x2="25" y1="25" y2="7" />
+        </g>
+      </svg>
+    </i>
+  </div>
+
+  <div class="border filter-border"></div>
+  <section class="filter-clothe-type">
+    <ul *ngFor="let clothe of clotheTypes">
+      <li>
+        <a href="">{{ clothe.clotheType }}</a>
+        <i class="arrow-filter">
+          <svg
+            height="24px"
+            id="Layer_1"
+            style="enable-background: new 0 0 512 512"
+            version="1.1"
+            viewBox="0 0 512 512"
+            width="24px"
+            xml:space="preserve"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <polygon
+              points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "
+            />
+          </svg>
+        </i>
+      </li>
+    </ul>
+  </section>
+  <div class="border filter-border"></div>
+  <section class="filter-price-slider">
+    <div class="filter-top">
+      <h2 class="filter-h2">Price</h2>
+      <i (click)="priceOpen()">
+        <svg
+          height="20px"
+          id="Layer_1"
+          style="enable-background: new 0 0 512 512"
+          version="1.1"
+          viewBox="0 0 512 512"
+          width="20px"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M256,213.7L256,213.7L256,213.7l174.2,167.2c4.3,4.2,11.4,4.1,15.8-0.2l30.6-29.9c4.4-4.3,4.5-11.3,0.2-15.5L264.1,131.1  c-2.2-2.2-5.2-3.2-8.1-3c-3-0.1-5.9,0.9-8.1,3L35.2,335.3c-4.3,4.2-4.2,11.2,0.2,15.5L66,380.7c4.4,4.3,11.5,4.4,15.8,0.2L256,213.7  z"
+          />
+        </svg>
+      </i>
+    </div>
+
+    <div class="range-slider slide-in-top" *ngIf="isPriceOpen">
+      <span
+        class="slider-track"
+        [style.left.%]="
+          ((minVal - sliderMinval) / (sliderMaxVal - sliderMinval)) * 100
+        "
+        [style.right.%]="
+          100 - ((maxVal - sliderMinval) / (sliderMaxVal - sliderMinval)) * 100
+        "
+      ></span>
+      <input
+        type="range"
+        name="min-val"
+        class="min-val"
+        [formControl]="minInputVal"
+        [min]="sliderMinval"
+        [max]="sliderMaxVal"
+        value="1000"
+        (input)="slideMin()"
+        title="price picker"
+      />
+
+      <input
+        type="range"
+        name="max-val"
+        class="max-val"
+        [formControl]="maxInputVal"
+        [min]="sliderMinval"
+        [max]="sliderMaxVal"
+        [value]="maxVal"
+        (input)="slideMax()"
+        title="price picker"
+      />
+
+      <div
+        class="tooltip min-tooltip"
+        [style.left.%]="
+          ((minVal - sliderMinval) / (sliderMaxVal - sliderMinval)) * 100
+        "
+        *ngIf="minVal"
+      >
+        $ {{ minVal }}
+      </div>
+      <div
+        class="tooltip max-tooltip"
+        [style.right.%]="
+          100 - ((maxVal - sliderMinval) / (sliderMaxVal - sliderMinval)) * 100
+        "
+        *ngIf="maxVal"
+      >
+        $ {{ maxVal }}
+      </div>
+    </div>
+
+    <!-- for input range -->
+    <!-- <div class="input-box">
+      <div class="min-box">
+        <div class="input-wrap">
+          <span class="input-addon">$</span>
+          <input
+            type="text"
+            name="min_input"
+            [ngModel]="minVal"
+            [formControl]="inputMinVal"
+            class="input-field min-input"
+            title="min input"
+          />
+        </div>
+      </div>
+
+      <div class="max-box">
+        <div class="input-wrap">
+          <p class="input-addon">$</p>
+          <input
+            type="text"
+            name="max_input"
+            [ngModel]="maxVal"
+            [formControl]="inputMaxVal"
+            class="input-field max-input"
+            title="max input"
+          />
+        </div>
+      </div>
+    </div> -->
+  </section>
+
+  <div class="border filter-border"></div>
+  <section class="filter-color">
+    <div class="filter-top">
+      <h2 class="filter-h2">Colors</h2>
+      <i (click)="colorsOpen()">
+        <svg
+          height="20px"
+          id="Layer_1"
+          style="enable-background: new 0 0 512 512"
+          version="1.1"
+          viewBox="0 0 512 512"
+          width="20px"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M256,213.7L256,213.7L256,213.7l174.2,167.2c4.3,4.2,11.4,4.1,15.8-0.2l30.6-29.9c4.4-4.3,4.5-11.3,0.2-15.5L264.1,131.1  c-2.2-2.2-5.2-3.2-8.1-3c-3-0.1-5.9,0.9-8.1,3L35.2,335.3c-4.3,4.2-4.2,11.2,0.2,15.5L66,380.7c4.4,4.3,11.5,4.4,15.8,0.2L256,213.7  z"
+          />
+        </svg>
+      </i>
+    </div>
+
+    <div class="color-container slide-in-top" *ngIf="isColorsOpen">
+      <button
+        *ngFor="let colors of colorFilter; let i = index"
+        title="color select"
+        class="color-button color-selected"
+        [style.background]="colors.clotheColor"
+        (click)="selectedColor(i)"
+      >
+        <i *ngIf="colors.selected">
+          <svg
+            height="15px"
+            version="1.1"
+            viewBox="0 0 18 15"
+            width="15px"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+          >
+            <g
+              fill="none"
+              fill-rule="evenodd"
+              id="Page-1"
+              stroke="none"
+              stroke-width="1"
+            >
+              <g
+                fill="#ffffff"
+                id="Core"
+                transform="translate(-423.000000, -47.000000)"
+              >
+                <g id="check" transform="translate(423.000000, 47.500000)">
+                  <path
+                    d="M6,10.2 L1.8,6 L0.4,7.4 L6,13 L18,1 L16.6,-0.4 L6,10.2 Z"
+                    id="Shape"
+                  />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </i>
+      </button>
+    </div>
+  </section>
+
+  <div class="border filter-border"></div>
+  <section class="filter-size">
+    <div class="filter-top">
+      <h2 class="filter-h2">Sizes</h2>
+      <i (click)="sizesOpen()">
+        <svg
+          height="20px"
+          id="Layer_1"
+          style="enable-background: new 0 0 512 512"
+          version="1.1"
+          viewBox="0 0 512 512"
+          width="20px"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M256,213.7L256,213.7L256,213.7l174.2,167.2c4.3,4.2,11.4,4.1,15.8-0.2l30.6-29.9c4.4-4.3,4.5-11.3,0.2-15.5L264.1,131.1  c-2.2-2.2-5.2-3.2-8.1-3c-3-0.1-5.9,0.9-8.1,3L35.2,335.3c-4.3,4.2-4.2,11.2,0.2,15.5L66,380.7c4.4,4.3,11.5,4.4,15.8,0.2L256,213.7  z"
+          />
+        </svg>
+      </i>
+    </div>
+    <div class="size-container slide-in-top" *ngIf="isSizesOpen">
+      <button
+        *ngFor="let sizes of sizeFilter; let i = index"
+        type="button"
+        title="size picker"
+        (click)="selectedSize(i)"
+        [ngClass]="sizes.selected ? 'size-selected' : ''"
+      >
+        {{ sizes.clotheSize }}
+      </button>
+    </div>
+  </section>
+
+  <div class="border filter-border"></div>
+  <section>
+    <div class="filter-top">
+      <h2 class="filter-h2">Dress Style</h2>
+      <i (click)="styleOpen()">
+        <svg
+          height="20px"
+          id="Layer_1"
+          style="enable-background: new 0 0 512 512"
+          version="1.1"
+          viewBox="0 0 512 512"
+          width="20px"
+          xml:space="preserve"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <path
+            d="M256,213.7L256,213.7L256,213.7l174.2,167.2c4.3,4.2,11.4,4.1,15.8-0.2l30.6-29.9c4.4-4.3,4.5-11.3,0.2-15.5L264.1,131.1  c-2.2-2.2-5.2-3.2-8.1-3c-3-0.1-5.9,0.9-8.1,3L35.2,335.3c-4.3,4.2-4.2,11.2,0.2,15.5L66,380.7c4.4,4.3,11.5,4.4,15.8,0.2L256,213.7  z"
+          />
+        </svg>
+      </i>
+    </div>
+
+    <section
+      class="filter-clothe-type clothe-style slide-in-top"
+      *ngIf="isStyleOpen"
+    >
+      <ul *ngFor="let style of styleFilter">
+        <li>
+          <a href="">{{ style.clotheStyle }}</a>
+          <i class="arrow-filter">
+            <svg
+              height="24px"
+              id="Layer_1"
+              style="enable-background: new 0 0 512 512"
+              version="1.1"
+              viewBox="0 0 512 512"
+              width="24px"
+              xml:space="preserve"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <polygon
+                points="160,115.4 180.7,96 352,256 180.7,416 160,396.7 310.5,256 "
+              />
+            </svg>
+          </i>
+        </li>
+      </ul>
+    </section>
+  </section>
+  <div class="border filter-border"></div>
+  <button class="button filter-button">Apply Filter</button>
+</aside>

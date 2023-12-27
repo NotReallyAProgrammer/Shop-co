@@ -9,6 +9,8 @@ import { BannerComponent } from './layouts/banner/banner.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CarousellComponent } from './layouts/carousell/carousell.component';
 
+import { NgxPaginationModule } from 'ngx-pagination';
+
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -17,6 +19,7 @@ import { CommentsCardComponent } from './layouts/comments-card/comments-card.com
 import { SummaryPipe } from './pipe/summary.pipe';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductCardComponent } from './layouts/product-card/product-card.component';
+import { FilterTabComponent } from './layouts/filter-tab/filter-tab.component';
 
 // register Swiper custom elements
 register();
@@ -33,8 +36,15 @@ register();
     SummaryPipe,
     CategoriesComponent,
     ProductCardComponent,
+    FilterTabComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxPaginationModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

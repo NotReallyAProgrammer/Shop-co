@@ -1,0 +1,386 @@
+.categories__filter {
+  padding-inline: var(--PADDING-INLINE);
+  display: flex;
+  flex-direction: column;
+  gap: var(--GAP-M);
+
+  height: 100%;
+  background-color: var(--WHITE);
+
+  -webkit-animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: slide-in-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.arrow-filter {
+  display: grid;
+  place-items: center;
+}
+
+.filter-h2 {
+  font-size: 1.25rem;
+}
+
+.close-filter {
+  cursor: pointer;
+}
+
+.categories__filter a {
+  text-decoration: none;
+  color: var(--DARK-GREY);
+}
+
+.categories__filter a:hover,
+.categories__filter a:focus {
+  color: var(--DARK);
+}
+
+.filter-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-general-heading {
+  margin-bottom: 30px;
+}
+
+.filter-top i {
+  display: grid;
+  place-items: center;
+}
+
+.filter-top svg {
+  width: 24px;
+}
+
+.filter-clothe-type {
+}
+
+.filter-clothe-type ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.filter-clothe-type ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* slider */
+.filter-price-slider {
+  width: 100%;
+}
+
+.filter-general-heading {
+  margin-bottom: 30px;
+}
+
+.range-slider {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  margin: 30px 0;
+  background-color: var(--GREY);
+  border-radius: var(--BORDER-ROUND);
+}
+
+.slider-track {
+  height: 100%;
+  position: absolute;
+  background-color: var(--DARK);
+}
+
+.range-slider input {
+  position: absolute;
+  width: 100%;
+  background: none;
+  pointer-events: none;
+  top: 50%;
+
+  transform: translateY(-50%);
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 3px solid var(--DARK);
+  background: var(--DARK);
+  pointer-events: auto;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: var(--BOX-SHADOW);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  border: 3px solid var(--DARK);
+  background: var(--DARK);
+  pointer-events: auto;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: var(--BOX-SHADOW);
+}
+
+.tooltip {
+  padding: 0.25rem 0.5rem;
+  background-color: #373f50;
+  color: var(--WHITE);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  border-radius: 0.25rem;
+  bottom: 120%;
+  display: block;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.min-tooltip {
+  transform: translateX(-50%) translateY(200%);
+  z-index: 5;
+}
+
+.max-tooltip {
+  transform: translateX(50%) translateY(200%);
+  z-index: 5;
+}
+
+.input-box {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--GAP-S);
+}
+
+/* .min-box {
+  padding-right: 0.5rem;
+  margin-right: 0.5rem;
+} */
+
+.input-wrap {
+  position: relative;
+  display: flex;
+
+  width: 100%;
+}
+.input-addon {
+  display: flex;
+  align-items: center;
+  padding: 0.625rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  font-weight: 700;
+  color: var(--WHITE);
+
+  background-color: var(--DARK);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-field {
+  margin-left: -1px;
+  padding: 0.425rem 0.75rem;
+  font-size: 0.825rem;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  flex: 1 1 auto;
+  width: 1%;
+  min-width: 0;
+  background-color: var(--WHITE);
+  background-clip: padding-box;
+}
+
+/* color picker */
+.filter-color {
+}
+
+.color-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--GAP-S);
+}
+
+.color-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--GREY);
+  border-radius: var(--BORDER-ROUND);
+  box-shadow: var(--BOX-SHADOW);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.color-button i {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgb(130, 130, 130);
+  background: radial-gradient(
+    circle,
+    rgba(130, 130, 130, 0.3) 4%,
+    rgba(240, 240, 240, 0.3) 100%
+  );
+}
+
+.color-button i svg {
+  fill: var(--WHITE);
+}
+
+/* size picker */
+.filter-size {
+}
+
+.size-container {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--GAP-S);
+}
+
+.size-container button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: var(--BORDER-ROUND);
+  cursor: pointer;
+}
+
+.size-selected {
+  background: var(--DARK);
+  color: var(--WHITE);
+}
+
+.clothe-style {
+  margin-top: 20px;
+}
+
+.filter-button {
+  margin-top: 10%;
+  border: 1px solid var(--DARK-GREY);
+  color: var(--DARK);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--DARK);
+  color: var(--WHITE);
+}
+
+.slide-in-top {
+  -webkit-animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.filter-border {
+  background-color: var(--GREY);
+}
+
+/* MEDIA QUERY */
+@media screen and (min-width: 760px) {
+  .categories__filter {
+    max-width: 300px;
+    height: fit-content;
+    border: 1px solid var(--GREY);
+    padding-block: 20px;
+    border-radius: var(--BORDER-RADIUS);
+  }
+
+  .close-filter {
+    visibility: hidden;
+  }
+}
+
+@media screen and(min-width:1200px) {
+  .categories__filter {
+    width: 300px;
+  }
+}
+
+/* KEYFRAMES */
+/* ----------------------------------------------
+ * Generated by Animista on 2023-12-22 19:1:45
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-100px);
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-top {
+  0% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2023-12-22 19:15:31
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info.
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
