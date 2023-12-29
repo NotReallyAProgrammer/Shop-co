@@ -20,6 +20,8 @@ import { SummaryPipe } from './pipe/summary.pipe';
 import { CategoriesComponent } from './pages/categories/categories.component';
 import { ProductCardComponent } from './layouts/product-card/product-card.component';
 import { FilterTabComponent } from './layouts/filter-tab/filter-tab.component';
+import { ProductPageComponent } from './pages/product-page/product-page.component';
+import { RatingComponent } from './layouts/rating/rating.component';
 
 // register Swiper custom elements
 register();
@@ -37,6 +39,8 @@ register();
     CategoriesComponent,
     ProductCardComponent,
     FilterTabComponent,
+    ProductPageComponent,
+    RatingComponent,
   ],
   imports: [
     BrowserModule,

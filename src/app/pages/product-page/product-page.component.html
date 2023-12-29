@@ -1,0 +1,73 @@
+<div class="border"></div>
+<div>
+  <a class="info-link">Home</a>
+</div>
+<section class="product">
+  <section class="product__info">
+    <div class="product-img-container">
+      <figure class="main-img-container">
+        <img
+          [src]="clotheInfo.clotheImgUrl"
+          alt="Clothe"
+          title="Image Of A Clothes"
+        />
+      </figure>
+
+      <div class="sub-img-container">
+        <figure class="sub-img">
+          <img
+            [src]="clotheInfo.clotheImgUrl"
+            alt="Clothe"
+            title="Image Of A Clothes"
+          />
+        </figure>
+
+        <figure class="sub-img">
+          <img
+            [src]="clotheInfo.clotheImgUrl"
+            alt="Clothe"
+            title="Image Of A Clothes"
+          />
+        </figure>
+
+        <figure class="sub-img">
+          <img
+            [src]="clotheInfo.clotheImgUrl"
+            alt="Clothe"
+            title="Image Of A Clothes"
+          />
+        </figure>
+      </div>
+    </div>
+
+    <section class="info-container">
+      <h2>{{ clotheInfo.clotheName }}</h2>
+      <app-rating [productRating]="clotheInfo.clotheRating"></app-rating>
+      <div class="price-container">
+        <p *ngIf="clotheInfo.isDiscounted" class="card-price">
+          {{
+            ((clotheInfo.clothesDiscount / 100) * clotheInfo.clothePrice -
+              clotheInfo.clothePrice) *
+              -1 | currency : "USD"
+          }}
+        </p>
+
+        <p [ngClass]="clotheInfo.isDiscounted ? 'discounted' : 'card-price'">
+          {{ clotheInfo.clothePrice | currency : "USD" }}
+        </p>
+
+        <p class="discount" *ngIf="clotheInfo.isDiscounted">
+          {{ clotheInfo.clothesDiscount }} %
+        </p>
+      </div>
+      <p class="product-disc">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste
+        perspiciatis, dicta placeat ex a dolores animi non porro dolorem nemo
+        ea, cupiditate recusandae repellendus nesciunt ratione. Officia sint
+        assumenda porro?
+      </p>
+
+      <div class="border"></div>
+    </section>
+  </section>
+</section>

@@ -19,15 +19,12 @@
       *ngFor="let carousell of carousellInfo; let i = index"
     >
       <figure class="img-container">
-        <img [src]="carousell.apparelImgUrl" alt="" />
+        <img [src]="carousell.clotheImgUrl" alt="" />
       </figure>
-      <p class="card-name">{{ carousell.apparelName }}</p>
+      <p class="card-name">{{ carousell.clotheName | summary : 20 }}</p>
 
       <div class="rating-container">
-        <div
-          class="crop"
-          [style.width.px]="(carousell.apparelRatings * 120) / 5"
-        >
+        <div class="crop" [style.width.px]="(carousell.clotheRating * 120) / 5">
           <div class="star-container">
             <span *ngFor="let star of maxRatingarr">
               <svg
@@ -53,11 +50,11 @@
           </div>
         </div>
         <p>
-          <span>{{ carousell.apparelRatings }}</span> / 5
+          <span>{{ carousell.clotheRating }}</span> / 5
         </p>
       </div>
 
-      <p class="card-price">{{ carousell.apparelPrice | currency : "USD" }}</p>
+      <p class="card-price">{{ carousell.clothePrice | currency : "USD" }}</p>
     </swiper-slide>
   </swiper-container>
 </div>

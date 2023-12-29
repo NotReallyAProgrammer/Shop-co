@@ -2,7 +2,6 @@
   padding-inline: var(--PADDING-INLINE);
   position: relative;
   overflow: hidden;
-  height: max-content;
 }
 
 .categories__url {
@@ -36,8 +35,6 @@
 
 .categories__main {
   margin-top: 5%;
-  margin-bottom: 80%;
-  height: max-content;
 }
 
 .main-header {
@@ -102,7 +99,7 @@
 .product-card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  place-items: center;
+
   gap: var(--GAP-M);
 }
 
@@ -128,6 +125,13 @@
   font-size: 12px;
   font-weight: 700;
   cursor: pointer;
+}
+
+.button-controller:disabled {
+  color: var(--WHITE);
+  border: 1px solid var(--DARK);
+  fill: var(--WHITE);
+  background-color: var(--DARK);
 }
 
 .button-controller:hover,
@@ -240,7 +244,7 @@
     gap: var(--GAP-M);
     max-width: 1200px;
     margin-inline: auto;
-    height: max-content;
+    padding-bottom: 10px;
   }
 
   .main-header {

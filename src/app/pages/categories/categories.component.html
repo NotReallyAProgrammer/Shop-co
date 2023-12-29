@@ -1,4 +1,4 @@
-<section class="categories">
+<section #main_container class="categories">
   <div class="border"></div>
 
   <div class="categories__url">
@@ -31,7 +31,7 @@
         <h2>Casual</h2>
 
         <div class="sort">
-          <p>Showing 1-10 of 100 Products</p>
+          <p>Showing {{ limit }} of {{ total }} Products</p>
           <div class="sort-right">
             <label>Sort By:</label>
             <select name="sort" id="sort" class="sort-option" title="sort">
@@ -88,7 +88,8 @@
           type="button"
           title="prev"
           class="button-controller"
-          (click)="prevPage()"
+          (click)="prevPage(main_container)"
+          [disabled]="currentPage === 1"
         >
           <i>
             <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +108,7 @@
             <li
               *ngFor="let page of pages"
               [ngClass]="{ 'page-item': true, active: currentPage === page }"
-              (click)="changePage(page)"
+              (click)="changePage(page, main_container)"
             >
               <span class="page-link"> {{ page }}</span>
             </li>
@@ -118,7 +119,8 @@
           type="button"
           title="next"
           class="button-controller"
-          (click)="nextPage()"
+          (click)="nextPage(main_container)"
+          [disabled]="currentPage === pageNumber"
         >
           Next
           <i>

@@ -5,6 +5,8 @@
   gap: var(--GAP-S);
 }
 .img-container {
+  min-width: 100px;
+
   height: 260px;
   width: 180px;
   box-shadow: var(--BOX-SHADOW);
@@ -37,19 +39,22 @@
 .card-name {
   margin-top: 5px;
 }
-.card-price {
-  font-size: 1.25rem;
-  font-size: clamp(1.25rem, 1.2rem + 0.25vw, 1.5rem);
+.card-price,
+.discounted {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.9rem + 0.5vw, 1.5rem);
 }
 
 .price-container {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 5px;
 }
 
 .discount {
-  font-size: 10px;
+  font-size: 0.4375rem;
+  font-size: clamp(0.4375rem, 0.4rem + 0.1875vw, 0.625rem);
   color: #f33;
   background-color: rgba(255, 165, 165, 0.438);
   padding: 6px 14px;
@@ -59,14 +64,15 @@
 
 .discounted {
   color: var(--DARK-GREY);
-  font-size: 20px;
-
   font-weight: 700;
-
   text-decoration-line: line-through;
 }
 
-.rating-container {
+@media screen and (max-width: 400px) {
+  .img-container {
+    height: 200px;
+    width: 150px;
+  }
 }
 
 @media screen and (min-width: 900px) {
