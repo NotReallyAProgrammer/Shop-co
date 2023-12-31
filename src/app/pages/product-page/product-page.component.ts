@@ -22,4 +22,26 @@ export class ProductPageComponent {
       this.clotheInfo = this.clothesData[this.productId];
     });
   }
+
+  // Color Selection
+  selectedColor(index: any): void {
+    this.clotheInfo.clotheColor[index].selected =
+      !this.clotheInfo.clotheColor[index].selected;
+    for (let i = 0; i < this.clotheInfo.clotheColor.length; i++) {
+      if (i != index) {
+        this.clotheInfo.clotheColor[i].selected = false;
+      }
+    }
+  }
+
+  // Size
+  selectedSize(index: any): void {
+    this.clotheInfo.clotheSize[index].selected =
+      !this.clotheInfo.clotheSize[index].selected;
+    for (let i = 0; i < this.clotheInfo.clotheSize.length; i++) {
+      if (i != index) {
+        this.clotheInfo.clotheSize[i].selected = false;
+      }
+    }
+  }
 }

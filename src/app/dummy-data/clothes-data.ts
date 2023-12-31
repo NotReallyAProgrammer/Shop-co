@@ -8,6 +8,36 @@ export const clothesInventory = [
     isDiscounted: false,
     clothesDiscount: 0,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -19,6 +49,36 @@ export const clothesInventory = [
     isDiscounted: false,
     clothesDiscount: 0,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -30,6 +90,36 @@ export const clothesInventory = [
     isDiscounted: true,
     clothesDiscount: 30,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -41,6 +131,36 @@ export const clothesInventory = [
     isDiscounted: true,
     clothesDiscount: 20,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
   {
     clotheImgUrl:
@@ -50,6 +170,36 @@ export const clothesInventory = [
     clothePrice: 180,
     isDiscounted: false,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
   {
     clotheImgUrl:
@@ -60,6 +210,36 @@ export const clothesInventory = [
     isDiscounted: true,
     clothesDiscount: 30,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
   {
     clotheImgUrl:
@@ -70,6 +250,36 @@ export const clothesInventory = [
     isDiscounted: true,
     clothesDiscount: 20,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -81,6 +291,36 @@ export const clothesInventory = [
     isDiscounted: false,
     clothesDiscount: 0,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -92,6 +332,36 @@ export const clothesInventory = [
     isDiscounted: false,
     clothesDiscount: 0,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   // DUPLICATE DATA FOR PAGINATION
@@ -105,6 +375,36 @@ export const clothesInventory = [
     isDiscounted: false,
     clothesDiscount: 0,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -116,6 +416,36 @@ export const clothesInventory = [
     isDiscounted: false,
     clothesDiscount: 0,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -127,6 +457,36 @@ export const clothesInventory = [
     isDiscounted: true,
     clothesDiscount: 30,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -147,6 +507,36 @@ export const clothesInventory = [
     clothePrice: 180,
     isDiscounted: false,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
   {
     clotheImgUrl:
@@ -157,6 +547,36 @@ export const clothesInventory = [
     isDiscounted: true,
     clothesDiscount: 30,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
   {
     clotheImgUrl:
@@ -167,6 +587,36 @@ export const clothesInventory = [
     isDiscounted: true,
     clothesDiscount: 20,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -178,6 +628,36 @@ export const clothesInventory = [
     isDiscounted: false,
     clothesDiscount: 0,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -189,6 +669,36 @@ export const clothesInventory = [
     isDiscounted: false,
     clothesDiscount: 0,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   //
@@ -201,6 +711,36 @@ export const clothesInventory = [
     isDiscounted: false,
     clothesDiscount: 0,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -212,6 +752,36 @@ export const clothesInventory = [
     isDiscounted: false,
     clothesDiscount: 0,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {
@@ -223,6 +793,36 @@ export const clothesInventory = [
     isDiscounted: true,
     clothesDiscount: 30,
     clotheStyle: 'Casual',
+    clotheColor: [
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+
+      {
+        color: '#fff',
+        selected: false,
+      },
+    ],
+    clotheSize: [
+      {
+        size: 'Small',
+        selected: false,
+      },
+      {
+        size: 'Medium',
+        selected: false,
+      },
+      {
+        size: 'Large',
+        selected: false,
+      },
+    ],
   },
 
   {

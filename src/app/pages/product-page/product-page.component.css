@@ -99,3 +99,91 @@
   font-size: 0.875rem;
   font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
 }
+
+.selection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--GAP-S);
+  padding-block: 10px;
+}
+
+.selection p {
+  color: var(--DARK-GREY);
+  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
+}
+
+.color-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--GAP-S);
+}
+
+.color-button {
+  width: clamp(30px, 5vw, 40px);
+  height: clamp(30px, 5vw, 40px);
+  border: 1px solid var(--GREY);
+  border-radius: var(--BORDER-ROUND);
+  box-shadow: var(--BOX-SHADOW);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* stock color */
+  background-color: black;
+}
+
+.color-button i {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgb(130, 130, 130);
+  background: radial-gradient(
+    circle,
+    rgba(130, 130, 130, 0.3) 4%,
+    rgba(240, 240, 240, 0.3) 100%
+  );
+}
+
+.color-button i svg {
+  fill: var(--WHITE);
+}
+
+.size-container {
+  display: flex;
+  gap: var(--GAP-S);
+  flex-wrap: wrap;
+}
+
+.size-container button {
+  padding: 10px 20px;
+
+  font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
+  border: none;
+  border-radius: var(--BORDER-ROUND);
+  cursor: pointer;
+}
+
+.size-selected {
+  background: var(--DARK);
+  color: var(--WHITE);
+}
+
+.clothe-style {
+  margin-top: 20px;
+}
+
+.filter-button {
+  margin-top: 10%;
+  border: 1px solid var(--DARK-GREY);
+  color: var(--DARK);
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: var(--DARK);
+  color: var(--WHITE);
+}

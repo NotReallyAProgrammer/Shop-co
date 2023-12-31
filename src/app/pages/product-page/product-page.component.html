@@ -68,6 +68,67 @@
       </p>
 
       <div class="border"></div>
+
+      <section class="selection">
+        <p>Select Color</p>
+        <div class="color-container slide-in-top">
+          <button
+            *ngFor="let colors of clotheInfo.clotheColor; let i = index"
+            title="color select"
+            class="color-button color-selected"
+            [style.background]="clotheInfo.clotheColor.color"
+            (click)="selectedColor(i)"
+          >
+            <i *ngIf="colors.selected">
+              <svg
+                height="15px"
+                version="1.1"
+                viewBox="0 0 18 15"
+                width="15px"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <g
+                  fill="none"
+                  fill-rule="evenodd"
+                  id="Page-1"
+                  stroke="none"
+                  stroke-width="1"
+                >
+                  <g
+                    fill="#ffffff"
+                    id="Core"
+                    transform="translate(-423.000000, -47.000000)"
+                  >
+                    <g id="check" transform="translate(423.000000, 47.500000)">
+                      <path
+                        d="M6,10.2 L1.8,6 L0.4,7.4 L6,13 L18,1 L16.6,-0.4 L6,10.2 Z"
+                        id="Shape"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </i>
+          </button>
+        </div>
+
+        <div class="border"></div>
+
+        <p>Select Color</p>
+        <div class="size-container">
+          <button
+            *ngFor="let sizes of clotheInfo.clotheSize; let i = index"
+            type="button"
+            title="size picker"
+            (click)="selectedSize(i)"
+            [ngClass]="sizes.selected ? 'size-selected' : ''"
+          >
+            {{ sizes.size }}
+          </button>
+        </div>
+      </section>
     </section>
   </section>
 </section>
