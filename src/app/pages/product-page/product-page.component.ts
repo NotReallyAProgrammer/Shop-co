@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { clothesInventory } from 'src/app/dummy-data/clothes-data';
+import { commentsData } from 'src/app/dummy-data/comment-data';
 
 @Component({
   selector: 'app-product-page',
@@ -11,6 +12,9 @@ export class ProductPageComponent {
   productId!: number;
   clotheInfo: any;
   clothesData = clothesInventory;
+  quantity: number = 1;
+
+  customerComment = commentsData;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -43,5 +47,14 @@ export class ProductPageComponent {
         this.clotheInfo.clotheSize[i].selected = false;
       }
     }
+  }
+
+  // Quantity
+  plusQty(): void {
+    this.quantity = this.quantity + 1;
+  }
+
+  minusQty(): void {
+    this.quantity = this.quantity - 1;
   }
 }
