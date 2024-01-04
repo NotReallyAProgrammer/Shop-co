@@ -35,3 +35,9 @@
   color: var(--DARK-GREY);
   text-overflow: clip;
 }
+
+@media screen and (min-width: 900px) {
+  .card-container {
+    height: 200px;
+  }
+}
