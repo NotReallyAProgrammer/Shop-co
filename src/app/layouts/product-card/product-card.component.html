@@ -1,34 +1,26 @@
-<div
-  class="card-container"
-  *ngFor="
-    let product of storeInventory
-      | paginate : { itemsPerPage: 9, currentPage: currentPage };
-    let i = index
-  "
-  [routerLink]="['/product', i, product.clotheName]"
->
+<div class="card-container">
   <figure class="img-container">
-    <img [src]="product.clotheImgUrl" alt="" />
+    <img [src]="storeInventory.clotheImgUrl" alt="" />
   </figure>
-  <p class="card-name">{{ product.clotheName }}</p>
+  <p class="card-name">{{ storeInventory.clotheName }}</p>
 
-  <app-rating [productRating]="product.clotheRating"></app-rating>
+  <app-rating [productRating]="storeInventory.clotheRating"></app-rating>
 
   <div class="price-container">
-    <p *ngIf="product.isDiscounted" class="card-price">
+    <p *ngIf="storeInventory.isDiscounted" class="card-price">
       {{
-        ((product.clothesDiscount / 100) * product.clothePrice -
-          product.clothePrice) *
+        ((storeInventory.clothesDiscount / 100) * storeInventory.clothePrice -
+          storeInventory.clothePrice) *
           -1 | currency : "USD"
       }}
     </p>
 
-    <p [ngClass]="product.isDiscounted ? 'discounted' : 'card-price'">
-      {{ product.clothePrice | currency : "USD" }}
+    <p [ngClass]="storeInventory.isDiscounted ? 'discounted' : 'card-price'">
+      {{ storeInventory.clothePrice | currency : "USD" }}
     </p>
 
-    <p class="discount" *ngIf="product.isDiscounted">
-      {{ product.clothesDiscount }} %
+    <p class="discount" *ngIf="storeInventory.isDiscounted">
+      {{ storeInventory.clothesDiscount }} %
     </p>
   </div>
 </div>

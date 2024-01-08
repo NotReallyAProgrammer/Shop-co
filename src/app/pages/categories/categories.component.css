@@ -91,16 +91,14 @@
 
 .main-product {
   margin-block: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--GAP-M);
+  place-items: center;
 }
 
 .product-card {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: var(--GAP-M);
 }
 
 .product-border {
@@ -281,7 +279,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-  .product-card {
+  .main-product {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
     row-gap: 40px;

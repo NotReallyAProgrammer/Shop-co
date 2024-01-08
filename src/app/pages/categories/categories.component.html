@@ -77,9 +77,20 @@
 
       <section class="main-product">
         <app-product-card
-          [storeInventory]="mainProduct"
+          *ngFor="
+            let products of mainProduct
+              | paginate
+                : {
+                    itemsPerPage: 9,
+                    currentPage: currentPage,
+
+                  };
+            let i = index
+          "
           class="product-card"
           [currentPage]="currentPage"
+          [storeInventory]="products"
+          (click)="goToProductPage(i, products.clotheName)"
         ></app-product-card>
       </section>
       <div class="border product-border"></div>

@@ -3,6 +3,7 @@ import { takeWhile, scan, tap } from 'rxjs/operators';
 
 import { Component, Input, HostListener } from '@angular/core';
 import { clothesInventory } from 'src/app/dummy-data/clothes-data';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-categories',
@@ -17,10 +18,13 @@ export class CategoriesComponent {
   total: number = this.mainProduct.length;
   pageNumber!: number;
 
+  id!: string;
+
   //Pagination
   @Input() currentPage: number = 1;
 
-  @Input() limit: number = 9;
+  limit: number = 9;
+
   // @Output() changePage = new EventEmitter<number>();
   pages: number[] = [];
   value!: string;
@@ -35,6 +39,8 @@ export class CategoriesComponent {
       this.filterOpen = false;
     }
   }
+
+  constructor(private router: Router) {}
 
   ngOnInit() {
     const pagesCount = Math.ceil(this.total / this.limit);
@@ -72,17 +78,6 @@ export class CategoriesComponent {
 
   prevPage(el: any): void {
     this.currentPage = this.currentPage - 1;
-
-    const duration = 600;
-    const interval = 5;
-    const move = (el.scrollTop * interval) / duration;
-    observableInterval(interval)
-      .pipe(
-        scan((acc, curr) => acc - move, el.scrollTop),
-        tap((position) => (el.scrollTop = position)),
-        takeWhile((val) => val > 0)
-      )
-      .subscribe();
   }
 
   nextPage(el: any): void {
@@ -93,5 +88,13 @@ export class CategoriesComponent {
 
   range(start: number, end: number): number[] {
     return [...Array(end).keys()].map((el) => el + start);
+  }
+
+  goToProductPage(id: any, name: any) {
+    if (this.currentPage > 1) {
+      this.router.navigate(['/product', this.limit + id, name]);
+    } else {
+      this.router.navigate(['/product', id, name]);
+    }
   }
 }

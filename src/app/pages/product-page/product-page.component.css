@@ -340,7 +340,9 @@
   flex-direction: column;
   gap: var(--GAP-M);
 }
-
+.pages-url {
+  margin-left: 5%;
+}
 /*  */
 /* MEDIA QUERY */
 @media screen and (min-width: 760px) {

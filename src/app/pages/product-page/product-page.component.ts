@@ -14,6 +14,8 @@ export class ProductPageComponent {
   clothesData = clothesInventory;
   quantity: number = 1;
 
+  sizeSelected!: string;
+
   customerComment = commentsData;
 
   constructor(private route: ActivatedRoute) {}
@@ -31,6 +33,7 @@ export class ProductPageComponent {
   selectedColor(index: any): void {
     this.clotheInfo.clotheColor[index].selected =
       !this.clotheInfo.clotheColor[index].selected;
+
     for (let i = 0; i < this.clotheInfo.clotheColor.length; i++) {
       if (i != index) {
         this.clotheInfo.clotheColor[i].selected = false;
@@ -42,6 +45,7 @@ export class ProductPageComponent {
   selectedSize(index: any): void {
     this.clotheInfo.clotheSize[index].selected =
       !this.clotheInfo.clotheSize[index].selected;
+    this.sizeSelected = this.clotheInfo.clotheSize[index].size;
     for (let i = 0; i < this.clotheInfo.clotheSize.length; i++) {
       if (i != index) {
         this.clotheInfo.clotheSize[i].selected = false;
@@ -56,5 +60,10 @@ export class ProductPageComponent {
 
   minusQty(): void {
     this.quantity = this.quantity - 1;
+  }
+
+  //
+  addToCart() {
+    console.log(this.productId, this.quantity, this.sizeSelected);
   }
 }

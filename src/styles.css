@@ -166,6 +166,38 @@ input:focus {
   cursor: pointer;
 }
 
+.pages-url {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: var(--GAP-S);
+
+  margin-bottom: 30px;
+  text-align: start;
+}
+
+.pages-url p:first-child,
+.pages-url p:last-child {
+  font-size: 0.875rem;
+  font-size: clamp(0.875rem, 0.85rem + 0.125vw, 1rem);
+}
+
+.pages-url p:last-child {
+  color: var(--DARK);
+  font-weight: 700;
+}
+
+.pages-url i {
+  display: grid;
+  place-items: center;
+}
+
+.pages-url svg {
+  height: 15px;
+  width: 15px;
+  fill: var(--DARK-GREY);
+}
+
 /* || GENERAL */
 
 html {

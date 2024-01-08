@@ -86,7 +86,13 @@
       </button>
     </div>
 
-    <button type="button" name="cart" title="Cart">
+    <button
+      type="button"
+      name="cart"
+      title="Cart"
+      [routerLink]="['/cart']"
+      routerLinkActive="router-link-active"
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -99,6 +105,8 @@
           fill="black"
         />
       </svg>
+
+      <div class="button-notif">3</div>
     </button>
 
     <button type="button" name="user" title="User">

@@ -22,6 +22,7 @@ import { ProductCardComponent } from './layouts/product-card/product-card.compon
 import { FilterTabComponent } from './layouts/filter-tab/filter-tab.component';
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { RatingComponent } from './layouts/rating/rating.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 // register Swiper custom elements
 register();
@@ -41,6 +42,7 @@ register();
     FilterTabComponent,
     ProductPageComponent,
     RatingComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
