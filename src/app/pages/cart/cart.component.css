@@ -68,12 +68,21 @@
   z-index: 1;
   top: 5px;
   right: 0;
-  width: 20px;
-  height: auto;
+  height: 30px;
+  width: 30px;
   display: grid;
   place-items: center;
   fill: red;
   cursor: pointer;
+  background: transparent;
+  border: none;
+  padding: 5px;
+}
+
+.delete-icon:hover,
+.delete-icon:focus {
+  background-color: rgba(253, 75, 75, 0.274);
+  border-radius: var(--BORDER-ROUND);
 }
 
 .quantity-container {
@@ -235,6 +244,41 @@
 .checkout-button span svg {
   fill: white;
   height: 20px;
+}
+
+.no-item {
+  max-width: 700px;
+  min-height: 400px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-evenly;
+  border: 2px solid var(--GREY);
+  border-radius: var(--BORDER-RADIUS);
+  background-color: var(--WHITE);
+  box-shadow: var(--BOX-SHADOW);
+  padding-inline: var(--PADDING-INLINE);
+}
+
+.no-item h2 {
+  font-size: 1.875rem;
+  font-size: clamp(1.875rem, 1.8rem + 0.375vw, 2.25rem);
+  font-weight: 900;
+}
+.no-item p {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.25rem);
+  max-width: 300px;
+  align-self: center;
+}
+
+.go-home {
+  background-color: var(--DARK);
+  width: 50%;
+  align-self: center;
+  color: var(--WHITE);
+  font-size: 16px;
 }
 
 /*  */

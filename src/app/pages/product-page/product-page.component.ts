@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { clothesInventory } from 'src/app/dummy-data/clothes-data';
 import { commentsData } from 'src/app/dummy-data/comment-data';
@@ -20,11 +20,8 @@ export class ProductPageComponent {
   sizeSelected!: string;
 
   customerComment = commentsData;
-
-  constructor(
-    private route: ActivatedRoute,
-    private cartService: CartServiceService
-  ) {}
+  cartService = inject(CartServiceService);
+  constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((value) => {

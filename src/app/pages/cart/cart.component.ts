@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { CartServiceService } from 'src/app/services/cart.service.service';
 
 @Component({
@@ -7,31 +7,19 @@ import { CartServiceService } from 'src/app/services/cart.service.service';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent {
-  quantity: number = 1;
   discount: number = 20;
-  price: number = 233;
-  shippingFee: number = 15;
+  voucherCode: string = 'thisbutafakevoucher';
+  shippingFee: number = 5;
 
-  total!: number;
+  total: number = 0;
 
-  constructor(public cartService: CartServiceService) {}
+  cartService = inject(CartServiceService);
+  constructor() {}
 
-  ngOnInit() {
-    var sum;
-    this.cartService.cartData.forEach(function (val) {
-      sum = val.productPrice + val.productPrice;
-    });
-
-    if (sum) {
-      this.total = sum;
-    }
-  }
   // Quantity
-  plusQty(): void {
-    this.quantity = this.quantity + 1;
-  }
 
-  minusQty(): void {
-    this.quantity = this.quantity - 1;
+  // Delete Cart
+  deleteCart(item: any): void {
+    this.cartService.cartDelete(item);
   }
 }

@@ -26,7 +26,13 @@
   <h2 class="banner-h2">Your Cart</h2>
 </div>
 
-<section class="cart">
+<div class="no-item" *ngIf="cartService.cartData.length <= 0">
+  <h2 class="">Your Cart is Empty</h2>
+  <p>Looks like you haven't added anything to your cart yet</p>
+  <button class="button go-home">Go Home</button>
+</div>
+
+<section class="cart" *ngIf="cartService.cartData.length > 0">
   <section class="cart__content">
     <div class="content-container" *ngFor="let cart of cartService.cartData">
       <figure class="img-container">
@@ -45,7 +51,13 @@
         <h4>{{ cart.productPrice | currency : "USD" }}</h4>
       </div>
 
-      <i class="delete-icon">
+      <button
+        name="delete"
+        type="button"
+        title="Delete Item"
+        class="delete-icon"
+        (click)="deleteCart(cart)"
+      >
         <svg
           enable-background="new 0 0 32 32"
           id="Glyph"
@@ -64,14 +76,14 @@
             id="XMLID_243_"
           />
         </svg>
-      </i>
+      </button>
 
       <div class="quantity-container">
         <button
           type="button"
           title="Minus"
-          (click)="minusQty()"
-          [disabled]="quantity === 1"
+          (click)="cartService.decreaseQuantity(cart.id)"
+          [disabled]="cart.productQuantity === 1"
         >
           <svg
             height="16px"
@@ -90,7 +102,11 @@
           </svg>
         </button>
         <p>{{ cart.productQuantity }}</p>
-        <button type="button" title="Plus" (click)="plusQty()">
+        <button
+          type="button"
+          title="Plus"
+          (click)="cartService.addQuantity(cart.id)"
+        >
           <svg
             height="16px"
             id="Layer_1"
@@ -117,7 +133,7 @@
 
       <div class="payment-info">
         <p>Subtotal</p>
-        <h4>{{ total | currency : "USD" }}</h4>
+        <h4>{{ cartService.getTotal() | currency : "USD" }}</h4>
 
         <p>Discount <span>(-20%)</span></p>
         <h4>-$121</h4>
@@ -130,7 +146,7 @@
 
       <div class="total-container">
         <p>Total</p>
-        <h4>{{ price + shippingFee | currency : "USD" }}</h4>
+        <h4>{{ cartService.getTotal() + shippingFee | currency : "USD" }}</h4>
       </div>
 
       <form class="voucher-container">
