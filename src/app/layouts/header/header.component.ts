@@ -1,4 +1,5 @@
 import { Component, HostListener } from '@angular/core';
+import { CartServiceService } from 'src/app/services/cart.service.service';
 
 @Component({
   selector: 'app-header',
@@ -12,8 +13,11 @@ export class HeaderComponent {
 
   scrHeight: any;
   scrWidth: any;
+
   // Constructor
-  constructor() {
+  constructor(public cartService: CartServiceService) {}
+
+  ngOnInit() {
     if ((this.scrWidth = window.screen.width >= 760)) {
       this.isNavOpen = true;
     } else {

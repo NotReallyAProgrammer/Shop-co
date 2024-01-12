@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { CartServiceService } from 'src/app/services/cart.service.service';
 
 @Component({
   selector: 'app-cart',
@@ -13,6 +14,18 @@ export class CartComponent {
 
   total!: number;
 
+  constructor(public cartService: CartServiceService) {}
+
+  ngOnInit() {
+    var sum;
+    this.cartService.cartData.forEach(function (val) {
+      sum = val.productPrice + val.productPrice;
+    });
+
+    if (sum) {
+      this.total = sum;
+    }
+  }
   // Quantity
   plusQty(): void {
     this.quantity = this.quantity + 1;

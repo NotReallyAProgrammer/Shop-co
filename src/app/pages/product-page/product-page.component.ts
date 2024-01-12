@@ -3,6 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { clothesInventory } from 'src/app/dummy-data/clothes-data';
 import { commentsData } from 'src/app/dummy-data/comment-data';
 
+import { Cart } from 'src/app/models/cart';
+import { CartServiceService } from 'src/app/services/cart.service.service';
+
 @Component({
   selector: 'app-product-page',
   templateUrl: './product-page.component.html',
@@ -13,12 +16,15 @@ export class ProductPageComponent {
   clotheInfo: any;
   clothesData = clothesInventory;
   quantity: number = 1;
-
+  productDisc!: string;
   sizeSelected!: string;
 
   customerComment = commentsData;
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartServiceService
+  ) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((value) => {
@@ -27,6 +33,9 @@ export class ProductPageComponent {
 
       this.clotheInfo = this.clothesData[this.productId];
     });
+
+    this.sizeSelected = this.clotheInfo.clotheSize[0].size;
+    this.clotheInfo.clotheSize[0].selected = true;
   }
 
   // Color Selection
@@ -64,6 +73,20 @@ export class ProductPageComponent {
 
   //
   addToCart() {
-    console.log(this.productId, this.quantity, this.sizeSelected);
+    let name = this.clotheInfo.clotheName.toString().replace(/\s/g, '');
+    this.productDisc = name + this.sizeSelected + 'Black';
+
+    if (this.cartService.cartData) {
+      let newCart: Cart = {
+        productId: this.productDisc,
+        productImg: this.clotheInfo.clotheImgUrl,
+        productName: this.clotheInfo.clotheName,
+        productColor: 'Black',
+        productSize: this.sizeSelected,
+        productPrice: this.clotheInfo.clothePrice,
+        productQuantity: this.quantity,
+      };
+      this.cartService.addCart(newCart);
+    }
   }
 }

@@ -106,7 +106,9 @@
         />
       </svg>
 
-      <div class="button-notif">3</div>
+      <div *ngIf="cartService.cartData" class="button-notif">
+        {{ cartService.cartData.length }}
+      </div>
     </button>
 
     <button type="button" name="user" title="User">
