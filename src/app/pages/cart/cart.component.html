@@ -56,7 +56,7 @@
         type="button"
         title="Delete Item"
         class="delete-icon"
-        (click)="deleteCart(cart)"
+        (click)="deleteItem(cart)"
       >
         <svg
           enable-background="new 0 0 32 32"
@@ -82,8 +82,8 @@
         <button
           type="button"
           title="Minus"
-          (click)="cartService.decreaseQuantity(cart.id)"
-          [disabled]="cart.productQuantity === 1"
+          (click)="minusQuantity(cart)"
+          [disabled]="cart.productQuantity == 1"
         >
           <svg
             height="16px"
@@ -102,11 +102,7 @@
           </svg>
         </button>
         <p>{{ cart.productQuantity }}</p>
-        <button
-          type="button"
-          title="Plus"
-          (click)="cartService.addQuantity(cart.id)"
-        >
+        <button type="button" title="Plus" (click)="addQuantity(cart)">
           <svg
             height="16px"
             id="Layer_1"

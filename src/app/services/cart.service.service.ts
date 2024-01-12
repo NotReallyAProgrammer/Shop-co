@@ -27,22 +27,26 @@ export class CartServiceService {
   }
 
   cartDelete(item: any) {
-    this.cartData = this.cartData.filter((i) => i.id !== item.id);
+    this.cartData = this.cartData.filter((i) => i.productId !== item.productId);
+    console.log(item);
   }
 
-  addQuantity(id: number) {
-    let item = this.cartData.find((i) => i.id === id);
+  addQuantity(id: string) {
+    let item = this.cartData.find((i) => i.productId === id);
 
     if (item) {
       item.productQuantity++;
     }
+
+    console.log(id);
+
     // this.cartData.forEach((item) => {
     //   item.productQuantity++;
     // });
   }
 
-  decreaseQuantity(id: number) {
-    let item = this.cartData.find((i) => i.id === id);
+  decreaseQuantity(id: string) {
+    let item = this.cartData.find((i) => i.productId === id);
 
     if (item) {
       item.productQuantity--;

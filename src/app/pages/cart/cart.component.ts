@@ -17,9 +17,15 @@ export class CartComponent {
   constructor() {}
 
   // Quantity
+  addQuantity(item: any) {
+    this.cartService.addQuantity(item.productId);
+  }
 
+  minusQuantity(item: any) {
+    this.cartService.decreaseQuantity(item.productId);
+  }
   // Delete Cart
-  deleteCart(item: any): void {
+  deleteItem(item: any): void {
     this.cartService.cartDelete(item);
   }
 }
