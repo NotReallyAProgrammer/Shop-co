@@ -31,6 +31,13 @@ export class HeaderComponent {
 
   showSearch(): void {
     this.isSearchOpen = !this.isSearchOpen;
+    if (this.scrWidth <= 920) {
+      if (this.isSearchOpen == false) {
+        this.isNavOpen = true;
+      } else {
+        this.isNavOpen = false;
+      }
+    }
   }
 
   // get the screen width and height
@@ -48,7 +55,9 @@ export class HeaderComponent {
 
   @HostListener('window:scroll', ['$event']) getScrollHeight(event: any) {
     if (window.scrollY > 0) {
-      if (this.isNavOpen == true) this.isNavOpen = false;
+      if (this.scrWidth < 760) {
+        if (this.isNavOpen == true) this.isNavOpen = false;
+      }
     }
   }
 }

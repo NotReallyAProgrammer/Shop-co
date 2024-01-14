@@ -65,10 +65,17 @@
   </section>
 
   <div class="header__right">
-    <div class="main-search-container">
-      <div class="search-container main-search" *ngIf="isSearchOpen">
-        <input type="text" name="" id="" placeholder="Search..." />
-      </div>
+    <div
+      class="main-search-container"
+      [ngClass]="{ 'close-search': !isSearchOpen }"
+    >
+      <input
+        type="text"
+        name=""
+        id=""
+        placeholder="Search..."
+        *ngIf="isSearchOpen"
+      />
 
       <button type="button" name="Search" title="Search" (click)="showSearch()">
         <svg

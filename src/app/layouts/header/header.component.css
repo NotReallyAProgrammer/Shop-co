@@ -113,13 +113,30 @@
 }
 
 .main-search-container {
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: var(--GREY);
+  gap: var(--GAP-S);
+  padding: 10px;
+  align-items: center;
+  border-radius: var(--BORDER-ROUND);
 }
 
-.main-search {
-  position: absolute;
-  right: 10%;
-  top: 100%;
-  z-index: 1;
+.main-search-container button:hover {
+  border-bottom: none;
+}
+
+.close-search button:hover {
+  border-bottom: 2px solid var(--DARK-GREY);
+}
+.close-search {
+  background-color: transparent;
+  padding: 0;
+}
+
+.main-search-container input {
+  background: transparent;
+  border: none;
 }
 
 .button-notif {

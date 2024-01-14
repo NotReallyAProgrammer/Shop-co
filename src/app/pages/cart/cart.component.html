@@ -29,7 +29,7 @@
 <div class="no-item" *ngIf="cartService.cartData.length <= 0">
   <h2 class="">Your Cart is Empty</h2>
   <p>Looks like you haven't added anything to your cart yet</p>
-  <button class="button go-home">Go Home</button>
+  <button routerLink="" class="button go-home">Go Home</button>
 </div>
 
 <section class="cart" *ngIf="cartService.cartData.length > 0">

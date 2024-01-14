@@ -18,7 +18,27 @@ export class ProductPageComponent {
   quantity: number = 1;
   productDisc!: string;
   sizeSelected!: string;
+  cartStatus: boolean = false;
+  imgActive: boolean = false;
 
+  imgStorage = [
+    {
+      imgUrl: '',
+      active: false,
+    },
+    {
+      imgUrl:
+        'https://images.pexels.com/photos/3589737/pexels-photo-3589737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      active: false,
+    },
+    {
+      imgUrl:
+        'https://images.pexels.com/photos/12446409/pexels-photo-12446409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      active: false,
+    },
+  ];
+
+  mainImage!: string;
   customerComment = commentsData;
   cartService = inject(CartServiceService);
   constructor(private route: ActivatedRoute) {}
@@ -33,6 +53,20 @@ export class ProductPageComponent {
 
     this.sizeSelected = this.clotheInfo.clotheSize[0].size;
     this.clotheInfo.clotheSize[0].selected = true;
+    this.imgStorage[0].imgUrl = this.clotheInfo.clotheImgUrl;
+    this.imgStorage[0].active = true;
+    this.mainImage = this.clotheInfo.clotheImgUrl;
+  }
+
+  mainImg(img: any, index: number) {
+    this.mainImage = img.imgUrl;
+
+    img.active = !img.active;
+    for (let i = 0; i <= this.imgStorage.length; i++) {
+      if (i != index) {
+        this.imgStorage[i].active = false;
+      }
+    }
   }
 
   // Color Selection
@@ -70,6 +104,8 @@ export class ProductPageComponent {
 
   //
   addToCart() {
+    this.cartAnimation();
+
     let name = this.clotheInfo.clotheName.toString().replace(/\s/g, '');
     this.productDisc = name + this.sizeSelected + 'Black';
 
@@ -85,5 +121,13 @@ export class ProductPageComponent {
       };
       this.cartService.addCart(newCart);
     }
+  }
+
+  //cart animation
+  cartAnimation(): void {
+    this.cartStatus = !this.cartStatus;
+    setTimeout(() => {
+      this.cartStatus = !this.cartStatus;
+    }, 3000);
   }
 }

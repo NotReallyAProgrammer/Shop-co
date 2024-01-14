@@ -1,7 +1,4 @@
-import { interval as observableInterval } from 'rxjs';
-import { takeWhile, scan, tap } from 'rxjs/operators';
-
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, Input, HostListener, ViewChild } from '@angular/core';
 import { clothesInventory } from 'src/app/dummy-data/clothes-data';
 import { Router } from '@angular/router';
 
@@ -30,6 +27,7 @@ export class CategoriesComponent {
   value!: string;
 
   @HostListener('window:resize', ['$event'])
+  @HostListener('window:scroll')
   getScreenSize() {
     this.scrWidth = window.innerWidth;
 
@@ -60,30 +58,20 @@ export class CategoriesComponent {
     }
   }
 
-  changePage(page: any, el: any): void {
+  changePage(page: any): void {
     this.currentPage = page;
-
-    // el.scrollToTop = 0;
-    // const duration = 600;
-    // const interval = 5;
-    // const move = (el.scrollToTop * interval) / duration;
-    // observableInterval(interval)
-    //   .pipe(
-    //     scan((acc, curr) => acc - move, el.scrollTop),
-    //     tap((position) => (el.scrollTop = position)),
-    //     takeWhile((val) => val > 0)
-    //   )
-    //   .subscribe();
+    this.goToTop();
   }
 
-  prevPage(el: any): void {
+  prevPage(): void {
     this.currentPage = this.currentPage - 1;
+
+    this.goToTop();
   }
 
-  nextPage(el: any): void {
+  nextPage(): void {
     this.currentPage = this.currentPage + 1;
-
-    el.scrollTop = 0;
+    this.goToTop();
   }
 
   range(start: number, end: number): number[] {
@@ -96,5 +84,13 @@ export class CategoriesComponent {
     } else {
       this.router.navigate(['/product', id, name]);
     }
+  }
+
+  goToTop(): void {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
   }
 }

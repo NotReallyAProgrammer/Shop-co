@@ -3,6 +3,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   gap: var(--GAP-S);
+  cursor: pointer;
 }
 .img-container {
   min-width: 100px;

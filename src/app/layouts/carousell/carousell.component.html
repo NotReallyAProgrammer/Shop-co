@@ -17,6 +17,7 @@
       id="swiper"
       class="card-container swiper"
       *ngFor="let carousell of carousellInfo; let i = index"
+      (click)="goToProduct(i, carousell.clotheName)"
     >
       <figure class="img-container">
         <img [src]="carousell.clotheImgUrl" alt="" />

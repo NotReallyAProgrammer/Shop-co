@@ -1,4 +1,3 @@
-import { NgOptimizedImage } from '@angular/common';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,7 +12,6 @@ export class CartServiceService {
     let isPresent = this.cartData.some(function (el: any) {
       return el.productId == data.productId;
     });
-    console.log(isPresent);
 
     if (isPresent) {
       this.cartData.forEach((items) => {
@@ -28,7 +26,6 @@ export class CartServiceService {
 
   cartDelete(item: any) {
     this.cartData = this.cartData.filter((i) => i.productId !== item.productId);
-    console.log(item);
   }
 
   addQuantity(id: string) {
@@ -37,8 +34,6 @@ export class CartServiceService {
     if (item) {
       item.productQuantity++;
     }
-
-    console.log(id);
 
     // this.cartData.forEach((item) => {
     //   item.productQuantity++;

@@ -99,7 +99,7 @@
           type="button"
           title="prev"
           class="button-controller"
-          (click)="prevPage(main_container)"
+          (click)="prevPage()"
           [disabled]="currentPage === 1"
         >
           <i>
@@ -119,7 +119,7 @@
             <li
               *ngFor="let page of pages"
               [ngClass]="{ 'page-item': true, active: currentPage === page }"
-              (click)="changePage(page, main_container)"
+              (click)="changePage(page)"
             >
               <span class="page-link"> {{ page }}</span>
             </li>
@@ -130,7 +130,7 @@
           type="button"
           title="next"
           class="button-controller"
-          (click)="nextPage(main_container)"
+          (click)="nextPage()"
           [disabled]="currentPage === pageNumber"
         >
           Next
