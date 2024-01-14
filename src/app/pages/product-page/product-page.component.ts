@@ -24,17 +24,17 @@ export class ProductPageComponent {
   imgStorage = [
     {
       imgUrl: '',
-      active: false,
+      selected: false,
     },
     {
       imgUrl:
         'https://images.pexels.com/photos/3589737/pexels-photo-3589737.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      active: false,
+      selected: false,
     },
     {
       imgUrl:
         'https://images.pexels.com/photos/12446409/pexels-photo-12446409.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      active: false,
+      selected: false,
     },
   ];
 
@@ -54,17 +54,17 @@ export class ProductPageComponent {
     this.sizeSelected = this.clotheInfo.clotheSize[0].size;
     this.clotheInfo.clotheSize[0].selected = true;
     this.imgStorage[0].imgUrl = this.clotheInfo.clotheImgUrl;
-    this.imgStorage[0].active = true;
+    this.imgStorage[0].selected = true;
     this.mainImage = this.clotheInfo.clotheImgUrl;
   }
 
   mainImg(img: any, index: number) {
-    this.mainImage = img.imgUrl;
+    this.mainImage = img;
 
-    img.active = !img.active;
-    for (let i = 0; i <= this.imgStorage.length; i++) {
+    this.imgStorage[index].selected = true;
+    for (let i = 0; i < this.imgStorage.length; i++) {
       if (i != index) {
-        this.imgStorage[i].active = false;
+        this.imgStorage[i].selected = false;
       }
     }
   }

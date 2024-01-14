@@ -33,13 +33,13 @@
         <figure
           class="sub-img"
           *ngFor="let img of imgStorage; let i = index"
-          [ngClass]="img.active ? 'active-img' : ''"
+          [ngClass]="img.selected ? 'active-img' : ''"
         >
           <img
             [src]="img.imgUrl"
             alt="Clothe"
             title="Image Of A Clothes"
-            (click)="mainImg(img, i)"
+            (click)="mainImg(img.imgUrl, i)"
           />
         </figure>
       </div>
