@@ -40,8 +40,9 @@ export class ProductPageComponent {
 
   mainImage!: string;
   customerComment = commentsData;
+
   cartService = inject(CartServiceService);
-  constructor(private route: ActivatedRoute) {}
+  route = inject(ActivatedRoute);
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((value) => {

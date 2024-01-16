@@ -368,7 +368,7 @@ export const clothesInventory = [
   {
     clotheImgUrl:
       'https://s3-alpha-sig.figma.com/img/f04a/017d/b094f9a20c2328f54a31b153619784f3?Expires=1704672000&Signature=TFOjM9Jy5gZezOBxpiO9ugBP7YzORzPFD9o0~HVwx95SgI9XhUKXEZpCKIRKDKVKnQg~Y3GR-dPAvKnxsO91MV6kjvcHzTdb8tsYOCnbhZIHeIKtx6gNjBUzVFAF7mUEuGrL2Rxxs8JEOHY3~UXn4nZZuJjnwSzqgxy6snbBIpJvpDaw3kQGvNZFtVlkNe3ujR~GgghbnFQpFJvA4S-tv2yUTQdfS5hkQeb0gp6LlqBh1fqbJlhlCHhRaOJPsdoyddBIkfNV3R~RERxdih6lTafkMW4OzqILpMYVVAuZKDqA5JhoM0oqBRfmFExj6fYmrSwYjRJutUfMDOuBciCl8w__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-    clotheName: 'Gradient Graphic T-Shirt 2',
+    clotheName: '2Gradient Graphic T-Shirt 2',
     clotheRating: 3.5,
     clothePrice: 145,
     isDiscounted: false,
@@ -409,7 +409,7 @@ export const clothesInventory = [
   {
     clotheImgUrl:
       'https://s3-alpha-sig.figma.com/img/aecd/8196/485b30fd30b3226e09bb8f8e494c260b?Expires=1704672000&Signature=AO-AbjPbwLbiow-Dlp8K4dlc4Ome11fxhUlM9fN6UM7IsdMuY8gIJfv5Dts-nm-X73AgQOi~zpYpuK8~22tjiE85i-j6kx7L1plxFK6UAFYhDBsMjejLscrOsR4Gq0eCSJbZ8TAg4KIYWUKA-1Y73ZCEyWReMtb8UJZRYRhuZs3lp4xquRomBhiWPlz~968YhUUzIK3OO8isCM7IZ0uP2ckNCHgEs4S9qjIYfn48SPgKK5c4TJCLQfu7lYrB-oHXsk8T4grdrvisWPW7Eirdc1K37pumj08VPR3WKIBsp-kb6N7OtvUv0GQPREXVCB4XZgtYazxg0ncxRQsMR5~8fA__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-    clotheName: 'Polo with Tipping Details',
+    clotheName: '2Polo with Tipping Details',
     clotheRating: 4.5,
     clothePrice: 180,
     isDiscounted: false,
@@ -450,7 +450,7 @@ export const clothesInventory = [
   {
     clotheImgUrl:
       'https://s3-alpha-sig.figma.com/img/6115/920b/12942762aefb7c7ac954e78b76284504?Expires=1704672000&Signature=W~LV3I5ARf-Kin~Zh-CdZucLTEjmGZinaeyDsqhUQxG90tKlrRLhHmiIE2Zio65szqHr57RGP1PAxtY7BYYyGyY0HTRyjwCVRfUsMnvNRZbdJPMkLs4jCconL94OFb~hZRhgj3ohtYHTTx~Ul-0WjzTkjnSkmCwAqRaklZd8W8-QrvB3xnrzfIC5m6Zl0RbsofEVwPlzhPI9rhX3km0rYEgqJXch~3Qx2pjdIKKaBAyEywA37ueDT58fbvoVswfqCQoBC40~Dwqhtv3I5vHDiX1VsZJjVBvLS1a0Wygsln7UwAUtiwTLtLIBfEpAywF7DdsHojgC1fZMnWrM~pkLHQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4 ',
-    clotheName: 'Black Striped T-shirt',
+    clotheName: '2Black Striped T-shirt',
     clotheRating: 5,
     clothePrice: 120,
     isDiscounted: true,
@@ -491,7 +491,7 @@ export const clothesInventory = [
   {
     clotheImgUrl:
       'https://s3-alpha-sig.figma.com/img/769b/9d60/ff941dde9bc0e54431b8d8fe3182f5e9?Expires=1704672000&Signature=JbxwlJMVEs35xJZQugmHDux9LoE6rKLqPFUCJp65x0Cd0v4Campkk-vYzaLduaUDmAhoY5gAmVDAj-MOKpaOwQq57MyEM29vdi5gtxYWe66yjBi6cutn4qNGWfFfweaJBJL0g8Zvx~QtmCKtfMo8wGS5y0eY9lbqnQpmO5ISE-KuqKCJUwWXeuaCPjWbtCdzu6PGUVhFgt4a~wCJPf4I0RHF8zePL-9XDuc4e4Yjuzyvyk0abz9eMOc0NTYjZC-odK6lyhlj21PMf3-iuUjJ99EheV0rn2Qe5z7NED-iJck6JJC32nrzT3S-txIvybdOcH1HDVhn2nYmBH~pieDqxQ__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
-    clotheName: 'Skinny Fit Jeans',
+    clotheName: '2Skinny Fit Jeans',
     clotheRating: 3.5,
     clothePrice: 240,
     isDiscounted: true,

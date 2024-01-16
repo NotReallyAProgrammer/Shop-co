@@ -52,7 +52,7 @@
   <section class="filter-price-slider">
     <div class="filter-top">
       <h2 class="filter-h2">Price</h2>
-      <i (click)="priceOpen()">
+      <i (click)="priceOpen()" [ngClass]="isPriceOpen ? '' : 'open'">
         <svg
           height="20px"
           id="Layer_1"
@@ -161,7 +161,7 @@
   <section class="filter-color">
     <div class="filter-top">
       <h2 class="filter-h2">Colors</h2>
-      <i (click)="colorsOpen()">
+      <i (click)="colorsOpen()" [ngClass]="isColorsOpen ? '' : 'open'">
         <svg
           height="20px"
           id="Layer_1"
@@ -228,7 +228,7 @@
   <section class="filter-size">
     <div class="filter-top">
       <h2 class="filter-h2">Sizes</h2>
-      <i (click)="sizesOpen()">
+      <i (click)="sizesOpen()" [ngClass]="isSizesOpen ? '' : 'open'">
         <svg
           height="20px"
           id="Layer_1"
@@ -263,7 +263,7 @@
   <section>
     <div class="filter-top">
       <h2 class="filter-h2">Dress Style</h2>
-      <i (click)="styleOpen()">
+      <i (click)="styleOpen()" [ngClass]="isStyleOpen ? '' : 'open'">
         <svg
           height="20px"
           id="Layer_1"

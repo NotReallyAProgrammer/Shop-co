@@ -427,8 +427,13 @@
 /* MEDIA QUERY */
 @media screen and (min-width: 760px) {
   .rating-container {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .comments-container {
+    width: 100%;
   }
 }
 

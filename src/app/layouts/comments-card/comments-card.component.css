@@ -1,11 +1,10 @@
 .card-container {
-  max-width: 400px;
-  max-height: 210px;
   padding: 25px 32px;
   border: 1px solid var(--DARK-GREY);
   border-radius: var(--BORDER-RADIUS);
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   gap: 5px;
   overflow: hidden;
   /* box-shadow: var(--BOX-SHADOW); */
@@ -30,14 +29,20 @@
   font-weight: 700;
 }
 
-.card-comment {
+.card-comment,
+.card-date {
   font-size: 14px;
   color: var(--DARK-GREY);
   text-overflow: clip;
 }
 
+.card-date span {
+  font-weight: 700;
+}
+
 @media screen and (min-width: 900px) {
   .card-container {
-    height: 200px;
+    min-height: 250px;
+    max-height: 300px;
   }
 }

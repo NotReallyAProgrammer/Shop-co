@@ -48,6 +48,7 @@
 .filter-top i {
   display: grid;
   place-items: center;
+  /* transform: rotate(0.5turn); */
 }
 
 .filter-top svg {
@@ -289,6 +290,10 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: var(--GREY);
 }
 
+.open {
+  transform: rotate(00.5turn);
+  transition: 0.3s ease-in-out;
+}
 /* MEDIA QUERY */
 @media screen and (min-width: 760px) {
   .categories__filter {

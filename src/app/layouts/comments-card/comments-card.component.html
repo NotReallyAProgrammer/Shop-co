@@ -25,6 +25,10 @@
   </div>
 
   <p class="card-comment">
-    {{ customersComment.comment | summary : 190 }}
+    {{ customersComment.comment | summary : 200 }}
+  </p>
+
+  <p class="card-date">
+    Posted on: <span>{{ customersComment.commentDate }}</span>
   </p>
 </div>
