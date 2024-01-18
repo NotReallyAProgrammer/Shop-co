@@ -1,6 +1,8 @@
 # ShopCo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.5.
+Live Server Sample:
+
+https://shop-co-1b7b3.web.app/
 
 ## Development server
 
