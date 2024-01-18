@@ -1,6 +1,6 @@
 # ShopCo
 
-Live Server Sample:
+Live Server Demo:
 
 https://shop-co-1b7b3.web.app/
 
