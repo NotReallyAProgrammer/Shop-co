@@ -37,7 +37,6 @@ export class CategoriesComponent {
   route = inject(ActivatedRoute);
 
   @HostListener('window:resize', ['$event'])
-  @HostListener('window:scroll')
   getScreenSize() {
     this.scrWidth = window.innerWidth;
 

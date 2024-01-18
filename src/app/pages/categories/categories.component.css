@@ -42,6 +42,8 @@
   align-items: center;
   gap: var(--GAP-S);
   position: relative;
+  flex-wrap: wrap;
+  padding-right: 40px;
 }
 
 .main-header h2 {
