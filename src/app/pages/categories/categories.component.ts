@@ -2,11 +2,12 @@ import {
   Component,
   Input,
   HostListener,
-  ViewChild,
   inject,
+  ElementRef,
 } from '@angular/core';
 import { clothesInventory } from 'src/app/dummy-data/clothes-data';
 import { ActivatedRoute, Router } from '@angular/router';
+import { IsThisOpenService } from 'src/app/services/is-this-open.service';
 
 @Component({
   selector: 'app-categories',
@@ -14,7 +15,6 @@ import { ActivatedRoute, Router } from '@angular/router';
   styleUrls: ['./categories.component.css'],
 })
 export class CategoriesComponent {
-  filterOpen: boolean = false;
   scrWidth!: number;
 
   mainProduct = clothesInventory;
@@ -30,24 +30,27 @@ export class CategoriesComponent {
 
   limit: number = 9;
 
-  // @Output() changePage = new EventEmitter<number>();
   pages: number[] = [];
   value!: string;
 
+  //Injects
   route = inject(ActivatedRoute);
+  router = inject(Router);
+  isThisOpenServices = inject(IsThisOpenService);
+  elRef = inject(ElementRef);
+
+  constructor() {}
 
   @HostListener('window:resize', ['$event'])
   getScreenSize() {
     this.scrWidth = window.innerWidth;
 
     if (this.scrWidth >= 760) {
-      this.filterOpen = true;
+      this.isThisOpenServices.isFilterOpen = true;
     } else {
-      this.filterOpen = false;
+      this.isThisOpenServices.isFilterOpen = false;
     }
   }
-
-  constructor(private router: Router) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe((value) => {
@@ -62,13 +65,13 @@ export class CategoriesComponent {
   }
 
   isFilterClose(status: any): void {
-    this.filterOpen = status;
+    this.isThisOpenServices.isFilterOpen = status;
   }
   isFilterOpen() {
-    if (this.filterOpen === false) {
-      this.filterOpen = true;
+    if (this.isThisOpenServices.isFilterOpen === false) {
+      this.isThisOpenServices.isFilterOpen = true;
     } else {
-      this.filterOpen = false;
+      this.isThisOpenServices.isFilterOpen = false;
     }
   }
 

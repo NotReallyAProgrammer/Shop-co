@@ -1,4 +1,13 @@
-import { Component, EventEmitter, Input, Output, Type } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  Input,
+  Output,
+  Type,
+  inject,
+} from '@angular/core';
 import {
   clotheType,
   clotheColor,

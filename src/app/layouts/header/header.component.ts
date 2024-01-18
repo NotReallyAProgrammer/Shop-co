@@ -1,5 +1,6 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { CartServiceService } from 'src/app/services/cart.service.service';
+import { IsThisOpenService } from 'src/app/services/is-this-open.service';
 
 @Component({
   selector: 'app-header',
@@ -10,13 +11,23 @@ export class HeaderComponent {
   isNavOpen: boolean = false;
   offsetFlag: boolean = true;
   isSearchOpen: boolean = false;
-
+  public text!: String;
   scrHeight: any;
   scrWidth: any;
+  cartService = inject(CartServiceService);
+  isThisOpenService = inject(IsThisOpenService);
+  elRef = inject(ElementRef);
 
   // Constructor
-  constructor(public cartService: CartServiceService) {}
+  constructor() {}
 
+  @HostListener('document:click', ['$event.target'])
+  public onClick(targetElement: any) {
+    const clickedInside = this.elRef.nativeElement.contains(targetElement);
+    if (!clickedInside) {
+      this.isNavOpen = false;
+    }
+  }
   ngOnInit() {
     if ((this.scrWidth = window.screen.width >= 760)) {
       this.isNavOpen = true;

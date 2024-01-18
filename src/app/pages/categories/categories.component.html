@@ -1,4 +1,8 @@
 <section #main_container class="categories">
+  <div
+    class="blur-background"
+    *ngIf="isThisOpenServices.isFilterOpen && scrWidth < 760"
+  ></div>
   <div class="border"></div>
 
   <div class="categories__url">
@@ -148,8 +152,8 @@
     </section>
     <app-filter-tab
       class="filter-tab"
-      *ngIf="filterOpen"
-      [filterStatus]="filterOpen"
+      *ngIf="isThisOpenServices.isFilterOpen"
+      [filterStatus]="isThisOpenServices.isFilterOpen"
       (onFilterStatus)="isFilterClose($event)"
     ></app-filter-tab>
   </section>
